@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>F.R.I.E.N.D. Home Screen Review</title>
+<style>
+:root{--blue:#002b87;--blue2:#0043b8;--dark:#06194f;--red:#e51e29;--green:#108d36;--line:#e5eaf4;--ink:#06194f;--shadow:0 5px 14px rgba(0,35,110,.12)}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#050505;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}body{display:flex;align-items:center;justify-content:center}button{font:inherit;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent;color:inherit}
+.device{width:402px;height:820px;background:linear-gradient(145deg,#202020,#050505);border-radius:46px;padding:59px 18px 49px;position:relative;box-shadow:0 0 0 5px #343434,0 0 0 9px #0b0b0b,0 24px 60px #000;transform-origin:center center}
+.device:before{content:"";position:absolute;inset:9px;border-radius:39px;border:1px solid #3c3c3c;pointer-events:none}.brand{position:absolute;top:18px;left:0;right:0;text-align:center;color:white;font-size:25px;font-weight:900;letter-spacing:.5px}
+.screen{height:712px;border-radius:10px;overflow:hidden;background:#f7f9fe;position:relative;box-shadow:inset 0 0 0 1px #151515}.app{height:100%;display:flex;flex-direction:column}.top{background:linear-gradient(135deg,#0048ba 0%,#002f91 50%,#001b5a 100%);color:white;padding:9px 13px 13px;flex:0 0 auto}.status{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:7px;line-height:1}.bar{display:flex;align-items:center;gap:12px}.hamb{font-size:31px;color:white;line-height:1;font-weight:900}.title{flex:1;text-align:center}.title h1{font-size:27px;line-height:1;letter-spacing:8px;margin:0;font-weight:900}.title small{display:block;margin-top:5px;font-size:9.8px;line-height:1.25;letter-spacing:1.08px;font-weight:900}.bell{position:relative;font-size:25px;line-height:1}.badge{position:absolute;right:-9px;top:-10px;background:var(--red);color:white;width:22px;height:22px;border-radius:50%;font-size:12px;display:grid;place-items:center;font-weight:900}
+.store{display:flex;align-items:center;gap:14px;margin-top:13px}.logo{width:76px;height:54px;object-fit:cover;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.25)}.store h2{margin:0 0 4px;font-size:21px;line-height:1;font-weight:900}.store p{margin:1px 0;font-size:13px;line-height:1.14}.open{margin-left:auto;font-size:12px;line-height:1.6;white-space:nowrap}.dot{display:inline-block;width:10px;height:10px;background:#19d264;border-radius:50%;margin-right:6px}.date{height:41px;background:white;color:var(--blue);display:flex;align-items:center;justify-content:space-between;padding:0 13px;border-bottom:1px solid var(--line);font-size:12px;flex:0 0 auto;box-shadow:0 2px 10px rgba(0,35,110,.05)}
+.content{flex:1;min-height:0;overflow:hidden;padding:9px 11px 55px;background:#f7f9fe}.card{background:linear-gradient(180deg,#fff,#fbfcff);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}.hero{display:grid;grid-template-columns:82px 1fr 82px;gap:7px;align-items:center;margin-bottom:8px}.miniStats{display:flex;flex-direction:column;gap:8px}.mini{height:68px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px 3px}.label{font-size:8.8px;line-height:1.05;text-transform:uppercase;font-weight:900;color:var(--blue)}.mini .num{font-size:24px;font-weight:900;line-height:1;margin:4px 0;color:var(--blue)}.mini small{font-size:10px;color:var(--blue);font-weight:700}.green{color:var(--green)!important}.red{color:var(--red)!important}
+.priority{width:151px;height:151px;border-radius:50%;margin:5px auto 8px;background:radial-gradient(circle at 36% 24%,#ff5662 0,#e41220 52%,#ba0012 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:white;box-shadow:0 9px 22px rgba(229,30,41,.25),0 0 0 3px #fff,0 0 0 5px #df1220}.priority .warn{font-size:29px;line-height:.9;margin-bottom:3px;font-weight:900}.priority .ptext{font-size:12px;line-height:1.13;font-weight:900;max-width:123px}.priority .time{font-size:9px;line-height:1;margin-top:5px;padding-top:5px;border-top:1px solid rgba(255,255,255,.62);width:92px;font-weight:900}
+.action{margin-bottom:8px}.action button{width:100%;min-height:64px;display:flex;align-items:center;gap:10px;text-align:left;padding:8px 10px}.roundIcon{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;color:white;background:linear-gradient(145deg,#004ed0,#002b87);font-size:22px;box-shadow:0 5px 12px rgba(0,43,135,.2)}.action h3{margin:0 0 4px;font-size:16px;line-height:1;font-weight:900;color:var(--blue)}.action p{margin:0;font-size:11.4px;line-height:1.18;color:#08205c;font-weight:700}.chev{margin-left:auto;color:var(--blue);font-size:30px;font-weight:900;line-height:1}
+.ops{padding:8px 9px 10px;margin-bottom:8px}.opsTitle{font-size:13px;line-height:1;margin:0 0 7px;text-transform:uppercase;font-weight:900;color:var(--blue);letter-spacing:.35px}.opsGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.opTile{height:62px;border:1px solid #e1e7f1;border-radius:9px;background:linear-gradient(180deg,#fff,#fbfcff);box-shadow:0 3px 10px rgba(0,31,84,.075);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:8.7px;line-height:1.08;font-weight:900;text-transform:uppercase;color:var(--blue);padding:4px 2px}.opTile svg{width:25px;height:25px;margin-bottom:4px;stroke:currentColor;fill:none;stroke-width:2.35;stroke-linecap:round;stroke-linejoin:round}.opTile .fillIcon{fill:currentColor;stroke:none}.c-production{color:#1266d5}.c-temperature{color:#e51e29}.c-replenishment{color:#159447}.c-ordering{color:#674bdb}.c-freshstart{color:#079a9b}.c-shrink{color:#e51e29}.c-inventory{color:#1167d8}.c-safety{color:#e0a000}.c-food{color:#079a9b}.c-labor{color:#673ab7}.c-tasks{color:#d92b78}.c-sales{color:#159447}.guided{grid-column:span 3;display:grid;grid-template-columns:42px 1fr 22px;align-items:center;text-align:left;padding:6px 9px;color:#1167d8}.guided svg{width:31px;height:31px;margin:0}.guided b{font-size:12px;color:var(--blue);line-height:1;display:block}.guided small{font-size:10px;color:#09235d;font-weight:700;line-height:1.1;display:block;margin-top:2px}
+.homeNav{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.tile{height:58px;padding:6px 3px;text-align:center;color:var(--blue);font-size:11px;line-height:1.1;font-weight:900}.tile .tileIcon{font-size:21px;line-height:1;margin-bottom:2px}.tile small{display:block;font-size:9.2px;font-weight:700;color:#09235d;line-height:1.05;margin-top:1px}.tile .badge2{position:absolute;background:var(--red);color:white;border-radius:50%;font-size:11px;width:20px;height:20px;display:grid;place-items:center;top:4px;right:19px}.tile{position:relative}
+.footer{position:absolute;left:0;right:0;bottom:0;height:42px;background:linear-gradient(135deg,#002b87,#001c61);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:12px;font-weight:700}.phoneBtns{position:absolute;bottom:13px;left:70px;right:70px;display:flex;justify-content:space-between;color:#d0d0d0;font-size:23px}
+.detail{padding:18px}.detail h2{color:var(--blue);font-size:20px;margin:0 0 10px}.bigBtn{width:100%;height:48px;border-radius:10px;background:#108d36;color:#fff;font-weight:900;margin-top:12px}.back{color:white;font-size:26px;font-weight:900}
+@media(max-width:900px){.device{transform:scale(min(calc((100vw - 8px)/402), calc((100vh - 8px)/820), 1));}}
+</style>
+<style id="home-100-fit-final">
+.device{width:402px!important;height:820px!important;padding:59px 18px 49px!important}
+.screen{height:712px!important}
+.top{padding:7px 13px 10px!important}
+.status{font-size:12px!important;margin-bottom:5px!important}
+.title h1{font-size:25px!important;letter-spacing:7.6px!important}
+.title small{font-size:9px!important;margin-top:3px!important;line-height:1.16!important}
+.hamb{font-size:29px!important}.bell{font-size:23px!important}
+.store{margin-top:9px!important;gap:12px!important}
+.logo{width:70px!important;height:49px!important}
+.store h2{font-size:19px!important;margin-bottom:2px!important}
+.store p{font-size:12px!important;line-height:1.05!important}
+.open{font-size:11px!important;line-height:1.38!important}
+.date{height:35px!important;font-size:11px!important;padding:0 12px!important}
+.content{padding:6px 10px 43px!important;overflow:hidden!important}
+.hero{grid-template-columns:78px 1fr 78px!important;gap:6px!important;margin-bottom:6px!important}
+.miniStats{gap:6px!important}.mini{height:59px!important;padding:4px 2px!important}
+.label{font-size:8px!important}.mini .num{font-size:21px!important;margin:2px 0!important}.mini small{font-size:9px!important}
+.priority{width:132px!important;height:132px!important;margin:3px auto 5px!important;box-shadow:0 7px 16px rgba(229,30,41,.24),0 0 0 2px #fff,0 0 0 4px #df1220!important}
+.priority .warn{font-size:24px!important;margin-bottom:2px!important}
+.priority .ptext{font-size:10.7px!important;line-height:1.08!important;max-width:112px!important}
+.priority .time{font-size:8px!important;margin-top:4px!important;padding-top:4px!important;width:82px!important}
+.action{margin-bottom:6px!important}.action button{min-height:55px!important;padding:6px 9px!important;gap:9px!important}
+.roundIcon{width:39px!important;height:39px!important;font-size:19px!important}
+.action h3{font-size:14px!important;margin-bottom:2px!important}.action p{font-size:10.5px!important;line-height:1.12!important}
+.chev{font-size:26px!important}.ops{padding:6px 8px 7px!important;margin-bottom:6px!important}
+.opsTitle{font-size:12px!important;margin:0 0 5px!important}.opsGrid{gap:5px!important}
+.opTile{height:49px!important;border-radius:8px!important;font-size:7.6px!important;padding:2px 1px!important}
+.opTile svg{width:20px!important;height:20px!important;margin-bottom:3px!important}
+.guided{height:49px!important;grid-template-columns:34px 1fr 18px!important;padding:4px 7px!important}
+.guided svg{width:25px!important;height:25px!important}.guided b{font-size:10.5px!important}
+.guided small{font-size:8.8px!important;line-height:1.03!important}
+.homeNav{gap:6px!important}.tile{height:49px!important;padding:4px 2px!important;font-size:9.5px!important}
+.tile .tileIcon{font-size:18px!important;margin-bottom:1px!important}.tile small{font-size:8px!important}
+.tile .badge2{width:18px!important;height:18px!important;font-size:10px!important;right:14px!important;top:2px!important}
+.footer{height:37px!important;font-size:11px!important;padding:0 14px!important}
+@media(max-width:900px){.device{transform:scale(min(calc((100vw - 8px)/402), calc((100vh - 8px)/820), 1))!important;}}
+</style>
+
+
+<style id="associate-workflow-style">
+.stepWrap{padding:10px 10px 43px!important;background:#f7f9fe;overflow:hidden!important}
+.screenTitle{color:#002b87;font-weight:900;font-size:18px;line-height:1.05;margin:0 0 8px;text-transform:uppercase}
+.subtle{font-size:11px;line-height:1.25;color:#09235d;font-weight:700}
+.assocHero{display:grid;grid-template-columns:54px 1fr;gap:10px;align-items:center;margin-bottom:7px}
+.avatar{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,#004ed0,#002b87);font-size:24px;font-weight:900;box-shadow:0 5px 12px rgba(0,43,135,.2)}
+.panel{background:linear-gradient(180deg,#fff,#fbfcff);border:1px solid #e5eaf4;border-radius:10px;box-shadow:0 5px 14px rgba(0,35,110,.12);padding:10px;margin-bottom:7px}
+.cta{width:100%;height:45px;border-radius:10px;background:linear-gradient(145deg,#18b85a,#0a8f3b);color:white;font-weight:900;font-size:13px;box-shadow:0 5px 13px rgba(16,141,54,.23);margin-top:7px}
+.ctaBlue{background:linear-gradient(145deg,#004ed0,#002b87);box-shadow:0 5px 13px rgba(0,43,135,.23)}
+.ctaLight{background:#fff;color:#002b87;border:1px solid #cfd9ee;box-shadow:0 3px 10px rgba(0,35,110,.08)}
+.missionCard{display:grid;grid-template-columns:38px 1fr 54px;gap:9px;align-items:center}
+.badgeP{border-radius:999px;padding:4px 7px;background:#ffe4e7;color:#c60013;font-size:9px;font-weight:900;text-align:center}
+.smallGrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.infoBox{background:#f7f9fe;border:1px solid #e5eaf4;border-radius:9px;padding:8px;text-align:center}
+.infoBox b{display:block;color:#002b87;font-size:20px;line-height:1}
+.infoBox span{display:block;color:#09235d;font-size:9px;font-weight:900;text-transform:uppercase;margin-top:2px}
+.optionRow{display:grid;grid-template-columns:32px 1fr 20px;gap:9px;align-items:center;border:1px solid #e5eaf4;background:#fff;border-radius:10px;padding:8px;margin-bottom:6px;box-shadow:0 3px 10px rgba(0,35,110,.06)}
+.optionRow .oicon{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:#fff;font-size:16px;font-weight:900;background:linear-gradient(145deg,#004ed0,#002b87)}
+.optionRow.orange .oicon{background:linear-gradient(145deg,#ff9a1f,#e16700)}
+.optionRow.purple .oicon{background:linear-gradient(145deg,#674bdb,#3f279b)}
+.optionRow h4{margin:0 0 2px;color:#002b87;font-size:12px;line-height:1;text-transform:uppercase}
+.optionRow p{margin:0;font-size:9.5px;line-height:1.13;color:#09235d;font-weight:700}
+.radioDot{width:17px;height:17px;border-radius:50%;border:2px solid #b8c4dd}
+.radioDot.on{border-color:#108d36;box-shadow:inset 0 0 0 4px white;background:#108d36}
+.checkList{display:grid;gap:6px}
+.checkItem{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;color:#09235d}
+.checkItem i{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#108d36;color:#fff;font-style:normal;font-size:12px}
+.bigCheck{font-size:52px;line-height:1;text-align:center;color:#108d36;margin:4px 0}
+.tempRead{font-size:46px!important;color:#108d36!important}
+.statusPill{display:inline-block;border-radius:999px;background:#e9f8ef;color:#108d36;padding:5px 9px;font-weight:900;font-size:11px;margin-top:3px}
+.progressTop{height:7px;background:#e6eaf4;border-radius:99px;overflow:hidden;margin:7px 0 0}
+.progressTop div{height:100%;background:linear-gradient(90deg,#002b87,#0f62ff)}
+.kpi3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.kpi3 .infoBox b{font-size:18px}
+</style>
+
+
+<style id="all-buttons-polish-style">
+.moduleHero{display:grid;grid-template-columns:46px 1fr 54px;gap:9px;align-items:center}
+.moduleIcon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:#fff;font-size:21px;font-weight:900;box-shadow:0 5px 12px rgba(0,43,135,.18)}
+.mBlue{background:linear-gradient(145deg,#004ed0,#002b87)}.mRed{background:linear-gradient(145deg,#ff3040,#c60013)}.mGreen{background:linear-gradient(145deg,#16aa4d,#087b31)}.mOrange{background:linear-gradient(145deg,#ff9a1f,#e16700)}.mPurple{background:linear-gradient(145deg,#674bdb,#3f279b)}.mTeal{background:linear-gradient(145deg,#10a9a0,#047a76)}.mGold{background:linear-gradient(145deg,#ffb11c,#f47b00)}
+.moduleHero h3{margin:0 0 3px;color:#002b87;font-size:14px;line-height:1;text-transform:uppercase}
+.moduleHero p{margin:0;color:#09235d;font-size:10.3px;line-height:1.16;font-weight:700}
+.scoreBadge{border-radius:999px;padding:5px 7px;text-align:center;font-size:10px;font-weight:900;background:#eef4ff;color:#002b87}
+.alertBadge{background:#ffe5e7;color:#c60013}.goodBadge{background:#e9f8ef;color:#108d36}.warnBadge{background:#fff3d9;color:#a56600}
+.barRow{display:grid;grid-template-columns:70px 1fr 42px;gap:7px;align-items:center;margin:7px 0;font-size:10.5px;font-weight:900;color:#09235d}
+.track2{height:6px;border-radius:99px;background:#e6eaf4;overflow:hidden}.track2 div{height:100%;border-radius:99px;background:linear-gradient(90deg,#004ed0,#002b87)}
+.actionList{display:grid;gap:6px}.actionItem{display:grid;grid-template-columns:22px 1fr auto;gap:7px;align-items:center;border-top:1px solid #e9edf6;padding-top:7px;font-size:10.5px;font-weight:800;color:#09235d}.actionItem:first-child{border-top:0;padding-top:0}.dotIcon{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#002b87;color:white;font-size:11px;font-weight:900}
+</style>
+
+
+<style id="production-update-style">
+.prodLegend{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:7px}
+.prodLegend span{font-size:8.5px;font-weight:900;text-align:center;border-radius:999px;padding:4px 3px}
+.prodLegend .r{background:#ffe5e7;color:#c60013}.prodLegend .y{background:#fff1d9;color:#9b6200}.prodLegend .g{background:#e9f8ef;color:#108d36}
+.prodBars{padding:9px}
+.prodBarRow{display:grid;grid-template-columns:78px 1fr 34px;gap:7px;align-items:center;margin:8px 0;font-size:10px;font-weight:900;color:#09235d}
+.prodMeter{position:relative;height:12px;border-radius:99px;overflow:hidden;background:linear-gradient(90deg,#e51e29 0%,#f5c342 50%,#108d36 100%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.prodMeter:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),rgba(255,255,255,.85) calc(25% - 1px),rgba(255,255,255,.85) 25%)}
+.prodMarker{position:absolute;top:1px;bottom:1px;width:4px;border-radius:99px;background:#001b5a;box-shadow:0 0 0 2px white;transform:translateX(-2px)}
+.prodTicks{display:grid;grid-template-columns:repeat(5,1fr);font-size:7.5px;color:#536079;font-weight:900;margin-top:2px;text-align:center}
+.prodActions .actionItem:nth-child(1) .dotIcon{background:#e51e29}
+.prodActions .actionItem:nth-child(2) .dotIcon{background:#f47b00}
+.prodActions .actionItem:nth-child(3) .dotIcon{background:#108d36}
+.prodActions .actionItem:nth-child(1) span{background:#ffe5e7;color:#c60013}
+.prodActions .actionItem:nth-child(2) span{background:#fff1d9;color:#9b6200}
+.prodActions .actionItem:nth-child(3) span{background:#e9f8ef;color:#108d36}
+</style>
+
+
+<style id="production-visible-fix">
+/* Production screen visibility fix */
+.prodCompact{padding:6px 9px 43px!important;overflow:hidden!important}
+.prodCompact .panel{margin-bottom:6px!important;padding:8px!important}
+.prodCompact .moduleHero{grid-template-columns:38px 1fr 46px!important;gap:7px!important}
+.prodCompact .moduleIcon{width:38px!important;height:38px!important;font-size:18px!important;border-radius:10px!important}
+.prodCompact .moduleHero h3{font-size:12.5px!important;margin-bottom:2px!important}
+.prodCompact .moduleHero p{font-size:9.2px!important;line-height:1.08!important}
+.prodCompact .scoreBadge{font-size:8.5px!important;padding:4px 5px!important}
+.prodCompact .smallGrid{gap:6px!important}
+.prodCompact .infoBox{padding:6px!important}
+.prodCompact .infoBox b{font-size:17px!important}
+.prodCompact .infoBox span{font-size:7.8px!important}
+.prodCompact .screenTitle{font-size:12px!important;margin-bottom:4px!important}
+.prodLegend{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:4px!important;margin:4px 0!important}
+.prodLegend span{font-size:7.2px!important;padding:3px 2px!important}
+.prodBarRow{grid-template-columns:69px 1fr 30px!important;gap:5px!important;margin:5px 0!important;font-size:8.7px!important}
+.prodMeter{height:9px!important}
+.prodMarker{width:3px!important}
+.prodTicks{font-size:6.2px!important;margin-top:1px!important}
+.prodActions .actionItem{font-size:8.8px!important;gap:5px!important;padding-top:5px!important}
+.prodActions .dotIcon{width:18px!important;height:18px!important;font-size:9px!important}
+.prodActions .scoreBadge{font-size:7.5px!important;padding:3px 4px!important}
+.prodCompact .cta{height:36px!important;font-size:11px!important;margin-top:6px!important}
+</style>
+
+
+<style id="production-final-tune">
+.prodMarker{background:#8B0000!important;box-shadow:0 0 0 2px white!important}
+.engagedText{grid-column:1 / -1;font-size:8.8px;line-height:1.12;color:#536079;font-weight:800;margin:-2px 0 1px 69px}
+.prodCompact .prodBarRow{margin:4px 0 2px!important}
+</style>
+
+
+<style id="production-lock-inventory-start">
+.prodMarker{
+  width:8px!important;
+  background:#8B0000!important;
+  box-shadow:0 0 0 2px #fff,0 0 8px rgba(139,0,0,.45)!important;
+  border-radius:8px!important;
+  transform:translateX(-4px)!important;
+}
+.prodActions .actionItem:nth-child(1) .dotIcon{background:#8B0000!important}
+.prodActions .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.prodActions .actionItem:nth-child(3) .dotIcon{background:#108d36!important}
+.prodActions .actionItem:nth-child(1) span{background:#ffe5e7!important;color:#8B0000!important}
+.prodActions .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+.prodActions .actionItem:nth-child(3) span{background:#e9f8ef!important;color:#108d36!important}
+.inventoryGrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.invRow{display:grid;grid-template-columns:72px 1fr 36px;gap:6px;align-items:center;margin:7px 0;font-size:9.5px;font-weight:900;color:#09235d}
+.invTrack{height:9px;border-radius:99px;background:#e6eaf4;overflow:hidden}
+.invTrack div{height:100%;border-radius:99px;background:linear-gradient(90deg,#004ed0,#108d36)}
+.invActions .actionItem:nth-child(1) .dotIcon{background:#004ed0}
+.invActions .actionItem:nth-child(2) .dotIcon{background:#f47b00}
+.invActions .actionItem:nth-child(3) .dotIcon{background:#108d36}
+</style>
+
+
+<style id="inventory-v2-style">
+.invMetricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.invMetric{background:#fff;border:1px solid #e5eaf4;border-radius:9px;box-shadow:0 3px 9px rgba(0,35,110,.08);padding:6px 2px;text-align:center}
+.invMetric b{display:block;color:#002b87;font-size:15px;line-height:1}
+.invMetric span{display:block;color:#09235d;font-size:6.9px;font-weight:900;text-transform:uppercase;margin-top:2px}
+.invMetric small{display:block;font-size:7.2px;font-weight:900;margin-top:1px}
+.invDeptPanel{padding:7px!important}
+.invDeptRow{display:grid;grid-template-columns:72px 1fr 31px;gap:5px;align-items:center;margin:4px 0 1px;font-size:8.5px;font-weight:900;color:#09235d}
+.invAccTrack{height:8px;border-radius:99px;background:linear-gradient(90deg,#e51e29 0%,#f5c342 50%,#108d36 100%);position:relative;overflow:hidden}
+.invAccTrack:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),rgba(255,255,255,.75) calc(25% - 1px),rgba(255,255,255,.75) 25%)}
+.invAccMark{position:absolute;top:0;bottom:0;width:5px;border-radius:99px;background:#8B0000;box-shadow:0 0 0 1.5px #fff;transform:translateX(-2.5px)}
+.invCounts{grid-column:1 / -1;font-size:7.4px;color:#536079;font-weight:800;margin:0 0 2px 72px;line-height:1.05}
+.invTicks{display:grid;grid-template-columns:repeat(5,1fr);font-size:5.9px;color:#536079;font-weight:900;margin-top:1px;text-align:center}
+.invActions .actionItem:nth-child(1) .dotIcon{background:#e51e29!important}
+.invActions .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.invActions .actionItem:nth-child(3) .dotIcon{background:#108d36!important}
+.invActions .actionItem{font-size:8.6px!important}
+</style>
+
+
+<style id="inventory-priority-final">
+.invMetric.oosMetric{border-color:#ffd2d6;background:linear-gradient(180deg,#fff5f6,#fff)}
+.invMetric.oosMetric b,.invMetric.oosMetric span,.invMetric.oosMetric small{color:#c60013!important}
+.inventoryPriority .screenTitle{color:#002b87}
+.inventoryPriority .actionItem:nth-child(1) .dotIcon{background:#c60013!important}
+.inventoryPriority .actionItem:nth-child(1) span{background:#ffe5e7!important;color:#c60013!important}
+.inventoryPriority .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.inventoryPriority .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+.inventoryPriority .actionItem:nth-child(3) .dotIcon{background:#108d36!important}
+.inventoryPriority .actionItem:nth-child(3) span{background:#e9f8ef!important;color:#108d36!important}
+</style>
+
+
+<style id="shrink-review-style">
+.shrinkMetricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.shrinkMetric{background:#fff;border:1px solid #e5eaf4;border-radius:9px;box-shadow:0 3px 9px rgba(0,35,110,.08);padding:6px 2px;text-align:center}
+.shrinkMetric b{display:block;color:#002b87;font-size:14px;line-height:1}
+.shrinkMetric span{display:block;color:#09235d;font-size:6.8px;font-weight:900;text-transform:uppercase;margin-top:2px}
+.shrinkMetric small{display:block;font-size:7.1px;font-weight:900;margin-top:1px}
+.shrinkMetric.risk{border-color:#ffe2aa;background:linear-gradient(180deg,#fff8ea,#fff)}
+.shrinkMetric.risk b,.shrinkMetric.risk small{color:#9b6200!important}
+.shrinkMetric.redRisk{border-color:#ffd2d6;background:linear-gradient(180deg,#fff5f6,#fff)}
+.shrinkDeptPanel{padding:7px!important}
+.shrinkDeptRow{display:grid;grid-template-columns:72px 1fr 32px;gap:5px;align-items:center;margin:4px 0 1px;font-size:8.5px;font-weight:900;color:#09235d}
+.shrinkTrack{height:8px;border-radius:99px;background:linear-gradient(90deg,#108d36 0%,#f5c342 50%,#e51e29 100%);position:relative;overflow:hidden}
+.shrinkTrack:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),rgba(255,255,255,.75) calc(25% - 1px),rgba(255,255,255,.75) 25%)}
+.shrinkMark{position:absolute;top:0;bottom:0;width:6px;border-radius:99px;background:#8B0000;box-shadow:0 0 0 1.5px #fff,0 0 6px rgba(139,0,0,.4);transform:translateX(-3px)}
+.shrinkTicks{display:grid;grid-template-columns:repeat(5,1fr);font-size:5.9px;color:#536079;font-weight:900;margin-top:1px;text-align:center}
+.shrinkNote{grid-column:1 / -1;font-size:7.3px;color:#536079;font-weight:800;margin:0 0 2px 72px;line-height:1.05}
+.shrinkPriority .actionItem{font-size:8.4px!important}
+.shrinkPriority .actionItem:nth-child(1) .dotIcon{background:#c60013!important}
+.shrinkPriority .actionItem:nth-child(1) span{background:#ffe5e7!important;color:#c60013!important}
+.shrinkPriority .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.shrinkPriority .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+.shrinkPriority .actionItem:nth-child(3) .dotIcon{background:#108d36!important}
+.shrinkPriority .actionItem:nth-child(3) span{background:#e9f8ef!important;color:#108d36!important}
+</style>
+
+
+<style id="shrink-final-corrections-v3">
+.shrinkMetricGrid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:5px!important}
+.shrinkMetric{
+  background:#fff!important;
+  border:1px solid #e5eaf4!important;
+  border-radius:9px!important;
+  box-shadow:0 3px 9px rgba(0,35,110,.08)!important;
+  padding:6px 2px!important;
+  text-align:center!important;
+}
+.shrinkMetric .tileTitle{
+  display:block!important;
+  color:#000!important;
+  font-size:6.8px!important;
+  line-height:1.05!important;
+  font-weight:900!important;
+  text-transform:uppercase!important;
+  margin:0 0 2px!important;
+}
+.shrinkMetric .tileValue{
+  display:block!important;
+  font-size:14px!important;
+  line-height:1!important;
+  font-weight:900!important;
+  margin:0!important;
+}
+.shrinkMetric .tileTrend{
+  display:block!important;
+  font-size:7.1px!important;
+  line-height:1.05!important;
+  font-weight:900!important;
+  margin:2px 0 0!important;
+}
+.darkYellow{color:#A66A00!important}
+.redValue{color:#C60013!important}
+.greenValue{color:#108d36!important}
+.shrinkPriority .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.shrinkPriority .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+</style>
+
+
+<style id="shrink-lock-final-pass">
+.shrinkTrack{
+  background:linear-gradient(90deg,#e51e29 0%,#f5c342 50%,#108d36 100%)!important;
+}
+.shrinkMetricGrid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:5px!important}
+.shrinkMetric{
+  background:#fff!important;
+  border:1px solid #e5eaf4!important;
+  border-radius:9px!important;
+  box-shadow:0 3px 9px rgba(0,35,110,.08)!important;
+  padding:6px 2px!important;
+  text-align:center!important;
+}
+.shrinkMetric .tileTitle{
+  display:block!important;
+  color:#000!important;
+  font-size:6.8px!important;
+  line-height:1.05!important;
+  font-weight:900!important;
+  text-transform:uppercase!important;
+  margin:0 0 2px!important;
+}
+.shrinkMetric .tileValue{
+  display:block!important;
+  font-size:14px!important;
+  line-height:1!important;
+  font-weight:900!important;
+  margin:0!important;
+}
+.shrinkMetric .tileTrend{
+  display:block!important;
+  font-size:7.1px!important;
+  line-height:1.05!important;
+  font-weight:900!important;
+  margin:2px 0 0!important;
+}
+.darkYellow{color:#A66A00!important}
+.redValue{color:#C60013!important}
+.greenValue{color:#108d36!important}
+.shrinkPriority .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.shrinkPriority .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+</style>
+
+
+<style id="shrink-locked-flip-back">
+.shrinkTrack{
+  background:linear-gradient(90deg,#108d36 0%,#f5c342 50%,#e51e29 100%)!important;
+}
+</style>
+
+
+<style id="replenishment-review-style">
+.repMetricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.repMetric{background:#fff;border:1px solid #e5eaf4;border-radius:9px;box-shadow:0 3px 9px rgba(0,35,110,.08);padding:6px 2px;text-align:center}
+.repMetric span{display:block;color:#000;font-size:6.8px;font-weight:900;text-transform:uppercase;line-height:1.05;margin-bottom:2px}
+.repMetric b{display:block;font-size:14px;line-height:1;font-weight:900}
+.repMetric small{display:block;font-size:7.1px;font-weight:900;margin-top:2px}
+.repGreen{color:#108d36!important}.repBlue{color:#002b87!important}.repYellow{color:#9b6200!important}
+.repDeptPanel{padding:7px!important}
+.repRow{display:grid;grid-template-columns:86px 1fr 28px;gap:5px;align-items:center;margin:4px 0 1px;font-size:8.3px;font-weight:900;color:#09235d}
+.repTrack{height:8px;border-radius:99px;background:#e6eaf4;overflow:hidden}
+.repTrack div{height:100%;border-radius:99px;background:linear-gradient(90deg,#004ed0,#108d36)}
+.repAssign{grid-column:1 / -1;font-size:7.25px;color:#536079;font-weight:800;margin:0 0 2px 86px;line-height:1.05}
+.repPriority .actionItem{font-size:8.2px!important}
+.repPriority .actionItem:nth-child(1) .dotIcon{background:#108d36!important}
+.repPriority .actionItem:nth-child(1) span{background:#e9f8ef!important;color:#108d36!important}
+.repPriority .actionItem:nth-child(2) .dotIcon{background:#108d36!important}
+.repPriority .actionItem:nth-child(2) span{background:#e9f8ef!important;color:#108d36!important}
+.repPriority .actionItem:nth-child(3) .dotIcon{background:#f47b00!important}
+.repPriority .actionItem:nth-child(3) span{background:#fff1d9!important;color:#9b6200!important}
+.fifoBox{background:#f7f9fe;border:1px solid #e5eaf4;border-radius:9px;padding:7px;margin-top:6px;font-size:8.5px;font-weight:800;color:#09235d;line-height:1.2}
+</style>
+
+
+<style id="replenishment-lock-spacing-final">
+.repPriority .actionItem{
+  padding-top:4px!important;
+  padding-bottom:2px!important;
+  font-size:8px!important;
+  gap:5px!important;
+}
+.repPriority .dotIcon{
+  width:18px!important;
+  height:18px!important;
+  font-size:9px!important;
+}
+.repPriority .scoreBadge{
+  font-size:7.2px!important;
+  padding:3px 4px!important;
+}
+.repPriority .screenTitle{
+  margin-bottom:4px!important;
+}
+.repPriority .fifoBox{
+  padding:5px!important;
+  margin-top:4px!important;
+  font-size:7.8px!important;
+  line-height:1.08!important;
+}
+.repPriority .cta{
+  height:34px!important;
+  font-size:10.5px!important;
+  margin-top:5px!important;
+}
+</style>
+
+
+<style id="replenishment-final-banner-button-fix">
+/* Replenishment final adjustment: preserve approved layout, shrink banner 12%, remove guided mission button */
+#app .repMetricGrid + .panel { margin-bottom:5px!important; }
+.repPriority .cta{display:none!important}
+.content:has(.repMetricGrid) .moduleHero{
+  grid-template-columns:34px 1fr 42px!important;
+  gap:6px!important;
+  padding:7px!important;
+  margin-bottom:5px!important;
+}
+.content:has(.repMetricGrid) .moduleHero .moduleIcon{
+  width:34px!important;
+  height:34px!important;
+  font-size:16px!important;
+  border-radius:9px!important;
+}
+.content:has(.repMetricGrid) .moduleHero h3{
+  font-size:11.5px!important;
+  margin-bottom:1px!important;
+}
+.content:has(.repMetricGrid) .moduleHero p{
+  font-size:8.7px!important;
+  line-height:1.05!important;
+}
+.content:has(.repMetricGrid) .moduleHero .scoreBadge{
+  font-size:7.3px!important;
+  padding:3px 4px!important;
+}
+</style>
+
+
+<style id="rep-bottom-4pct">
+.repPriority{
+  padding:5px !important;
+}
+.repPriority .actionList{
+  gap:2px !important;
+}
+.repPriority .actionItem{
+  padding-top:2px !important;
+  padding-bottom:1px !important;
+}
+.repPriority .fifoBox{
+  padding:3px !important;
+  margin-top:2px !important;
+  margin-bottom:0 !important;
+  line-height:1.0 !important;
+}
+</style>
+
+
+<style id="rep-remove-flow-lock">
+.repPriority > .fifoBox{
+  display:none!important;
+}
+</style>
+
+
+<style id="food-safety-review-style">
+.foodMetricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.foodMetric{background:#fff;border:1px solid #e5eaf4;border-radius:9px;box-shadow:0 3px 9px rgba(0,35,110,.08);padding:6px 2px;text-align:center}
+.foodMetric span{display:block;color:#000;font-size:6.8px;font-weight:900;text-transform:uppercase;line-height:1.05;margin-bottom:2px}
+.foodMetric b{display:block;font-size:14px;line-height:1;font-weight:900}
+.foodMetric small{display:block;font-size:7.1px;font-weight:900;margin-top:2px}
+.foodGreen{color:#108d36!important}.foodYellow{color:#9b6200!important}.foodRed{color:#c60013!important}
+.foodDeptPanel{padding:7px!important}
+.foodDeptRow{display:grid;grid-template-columns:82px 1fr 40px;gap:5px;align-items:center;border-bottom:1px solid #e9edf6;padding:4px 0;font-size:8.6px;font-weight:900;color:#09235d}
+.foodDeptRow:last-child{border-bottom:0}
+.foodTrend{font-size:7.3px;font-weight:900;color:#536079;line-height:1.05}
+.foodScore{text-align:right;font-size:11px;font-weight:900}
+.foodPriority .actionItem{font-size:8.2px!important;line-height:1.07!important}
+.foodPriority .actionItem:nth-child(1) .dotIcon{background:#c60013!important}
+.foodPriority .actionItem:nth-child(1) span{background:#ffe5e7!important;color:#c60013!important}
+.foodPriority .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.foodPriority .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+.foodPriority .actionItem:nth-child(3) .dotIcon{background:#f47b00!important}
+.foodPriority .actionItem:nth-child(3) span{background:#fff1d9!important;color:#9b6200!important}
+.foodCompact{padding:6px 9px 43px!important;overflow:hidden!important}
+.foodCompact .panel{margin-bottom:6px!important;padding:8px!important}
+.foodCompact .moduleHero{grid-template-columns:38px 1fr 46px!important;gap:7px!important}
+.foodCompact .moduleIcon{width:38px!important;height:38px!important;font-size:18px!important;border-radius:10px!important}
+.foodCompact .moduleHero h3{font-size:12.5px!important;margin-bottom:2px!important}
+.foodCompact .moduleHero p{font-size:9.1px!important;line-height:1.07!important}
+.foodCompact .scoreBadge{font-size:8px!important;padding:4px 5px!important}
+</style>
+
+
+<style id="ordering-review-style">
+.orderMetricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.orderMetric{background:#fff;border:1px solid #e5eaf4;border-radius:9px;box-shadow:0 3px 9px rgba(0,35,110,.08);padding:6px 2px;text-align:center}
+.orderMetric span{display:block;color:#000;font-size:6.8px;font-weight:900;text-transform:uppercase;line-height:1.05;margin-bottom:2px}
+.orderMetric b{display:block;font-size:14px;line-height:1;font-weight:900}
+.orderMetric small{display:block;font-size:7.1px;font-weight:900;margin-top:2px}
+.orderGreen{color:#108d36!important}.orderBlue{color:#002b87!important}.orderRed{color:#c60013!important}.orderYellow{color:#9b6200!important}
+.orderDeptPanel{padding:7px!important}
+.orderRow{display:grid;grid-template-columns:75px 1fr 74px;gap:5px;align-items:center;border-bottom:1px solid #e9edf6;padding:4px 0;font-size:8.5px;font-weight:900;color:#09235d}
+.orderRow:last-child{border-bottom:0}
+.orderLeader{font-size:7.3px;color:#536079;font-weight:800;line-height:1.05}
+.assistBtn{height:22px;border-radius:999px;background:#108d36;color:white;font-size:6.8px;font-weight:900;padding:0 5px;box-shadow:0 2px 6px rgba(16,141,54,.2)}
+.assistBtn.closed{background:#dce3ef;color:#6a7488;box-shadow:none}
+.orderPriority .actionItem{font-size:8.2px!important;line-height:1.07!important}
+.orderPriority .actionItem:nth-child(1) .dotIcon{background:#108d36!important}
+.orderPriority .actionItem:nth-child(1) span{background:#e9f8ef!important;color:#108d36!important}
+.orderPriority .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.orderPriority .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+.orderPriority .actionItem:nth-child(3) .dotIcon{background:#c60013!important}
+.orderPriority .actionItem:nth-child(3) span{background:#ffe5e7!important;color:#c60013!important}
+.orderCompact{padding:6px 9px 43px!important;overflow:hidden!important}
+.orderCompact .panel{margin-bottom:6px!important;padding:8px!important}
+.orderCompact .moduleHero{grid-template-columns:38px 1fr 46px!important;gap:7px!important}
+.orderCompact .moduleIcon{width:38px!important;height:38px!important;font-size:18px!important;border-radius:10px!important}
+.orderCompact .moduleHero h3{font-size:12.5px!important;margin-bottom:2px!important}
+.orderCompact .moduleHero p{font-size:9.1px!important;line-height:1.07!important}
+.orderCompact .scoreBadge{font-size:8px!important;padding:4px 5px!important}
+</style>
+
+
+<style id="ordering-remove-assignments-space-final">
+.orderCompact{
+  padding:7px 9px 43px!important;
+  overflow:hidden!important;
+}
+.orderCompact .panel{
+  margin-bottom:8px!important;
+  padding:9px!important;
+}
+.orderCompact .moduleHero{
+  grid-template-columns:40px 1fr 48px!important;
+  gap:8px!important;
+}
+.orderCompact .moduleIcon{
+  width:40px!important;
+  height:40px!important;
+  font-size:19px!important;
+}
+.orderMetricGrid{
+  gap:6px!important;
+  margin-bottom:8px!important;
+}
+.orderMetric{
+  padding:7px 2px!important;
+}
+.orderMetric span{
+  font-size:7px!important;
+}
+.orderMetric b{
+  font-size:15px!important;
+}
+.orderMetric small{
+  font-size:7.3px!important;
+}
+.orderDeptPanel{
+  padding:9px!important;
+}
+.orderRow{
+  grid-template-columns:78px 1fr 78px!important;
+  padding:5px 0!important;
+  font-size:8.8px!important;
+}
+.orderLeader{
+  font-size:7.5px!important;
+}
+.assistBtn{
+  height:24px!important;
+  font-size:6.9px!important;
+}
+</style>
+
+
+
+
+<style id="labor-final-grid-adjustment">
+.laborCompact{padding:6px 8px 43px!important;overflow:hidden!important}
+.laborCompact .panel{margin-bottom:6px!important;padding:8px!important}
+.laborMetricGrid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:5px!important}
+.laborMetric{background:#fff!important;border:1px solid #e5eaf4!important;border-radius:9px!important;box-shadow:0 3px 9px rgba(0,35,110,.08)!important;padding:6px 2px!important;text-align:center!important}
+.laborMetric span{display:block!important;font-size:6.3px!important;font-weight:900!important;color:#000!important;line-height:1.05!important;text-transform:uppercase!important}
+.laborMetric b{display:block!important;font-size:13px!important;font-weight:900!important;line-height:1!important;margin-top:2px!important}
+.laborMetric small{display:block!important;font-size:6.7px!important;font-weight:900!important;line-height:1.05!important;margin-top:2px!important}
+.laborRed{color:#c60013!important}.laborGreen{color:#108d36!important}.laborYellow{color:#9b6200!important}
+.laborGrid{display:grid!important;grid-template-columns:56px repeat(6,1fr)!important;gap:2px!important;font-size:6.3px!important;font-weight:900!important;line-height:1!important}
+.laborGrid div{background:#fff!important;border:1px solid #e9edf6!important;border-radius:5px!important;padding:3px 2px!important;text-align:center!important;min-height:18px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.laborGrid .head{background:#eef4ff!important;color:#002b87!important;text-transform:uppercase!important}
+.laborGrid .dept{color:#09235d!important;justify-content:flex-start!important;text-align:left!important;padding-left:3px!important}
+.laborCompact .screenTitle{font-size:11.5px!important;margin-bottom:4px!important}
+.laborCompact .actionItem{font-size:8px!important;line-height:1.05!important;padding-top:4px!important;gap:5px!important}
+.laborCompact .dotIcon{width:18px!important;height:18px!important;font-size:9px!important}
+.laborCompact .scoreBadge{font-size:6.9px!important;padding:3px 4px!important}
+</style>
+
+
+<style id="labor-tile-mission-polish">
+.laborMetric{
+  min-height:54px!important;
+  padding:8px 3px!important;
+}
+.laborMetric span{
+  font-size:7px!important;
+  line-height:1.08!important;
+}
+.laborMetric b{
+  font-size:15.5px!important;
+  margin-top:3px!important;
+}
+.laborMetric small{
+  font-size:7.2px!important;
+  margin-top:3px!important;
+}
+.laborCompact .panel{
+  margin-bottom:5px!important;
+  padding:7px!important;
+}
+.laborCompact .actionList{
+  gap:4px!important;
+}
+.laborCompact .actionItem{
+  font-size:7.8px!important;
+  line-height:1.04!important;
+  padding-top:4px!important;
+}
+.laborPriority .actionItem:nth-child(1) .dotIcon{background:#f47b00!important}
+.laborPriority .actionItem:nth-child(1) span{background:#fff1d9!important;color:#9b6200!important}
+.laborPriority .actionItem:nth-child(2) .dotIcon{background:#c60013!important}
+.laborPriority .actionItem:nth-child(2) span{background:#ffe5e7!important;color:#c60013!important}
+.laborPriority .actionItem:nth-child(3) .dotIcon{background:#c60013!important}
+.laborPriority .actionItem:nth-child(3) span{background:#ffe5e7!important;color:#c60013!important}
+</style>
+
+
+<style id="labor-vertical-fill-final">
+.laborCompact{
+  padding:7px 8px 43px!important;
+}
+.laborMetric{
+  min-height:66px!important;
+  padding:10px 3px!important;
+}
+.laborMetric span{
+  font-size:7.4px!important;
+  line-height:1.1!important;
+}
+.laborMetric b{
+  font-size:17px!important;
+  margin-top:4px!important;
+}
+.laborMetric small{
+  font-size:7.7px!important;
+  margin-top:4px!important;
+}
+.laborPriority{
+  padding:9px!important;
+}
+.laborPriority .actionList{
+  gap:7px!important;
+}
+.laborPriority .actionItem{
+  min-height:44px!important;
+  font-size:8.8px!important;
+  line-height:1.1!important;
+  padding-top:7px!important;
+  padding-bottom:5px!important;
+}
+.laborPriority .dotIcon{
+  width:22px!important;
+  height:22px!important;
+  font-size:11px!important;
+}
+.laborPriority .scoreBadge{
+  font-size:7.5px!important;
+  padding:4px 5px!important;
+}
+.laborPriority .actionItem:nth-child(1) .dotIcon{background:#c60013!important}
+.laborPriority .actionItem:nth-child(1) span{background:#ffe5e7!important;color:#c60013!important}
+</style>
+
+
+<style id="fresh-start-screen-style">
+.freshCompact{padding:6px 8px 43px!important;overflow:hidden!important}
+.freshCompact .panel{margin-bottom:5px!important;padding:7px!important}
+.freshMetricGrid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:5px!important}
+.freshMetric{background:#fff!important;border:1px solid #e5eaf4!important;border-radius:9px!important;box-shadow:0 3px 9px rgba(0,35,110,.08)!important;padding:7px 2px!important;text-align:center!important;min-height:58px!important}
+.freshMetric span{display:block!important;font-size:6.5px!important;font-weight:900!important;color:#000!important;line-height:1.08!important;text-transform:uppercase!important}
+.freshMetric b{display:block!important;font-size:15.5px!important;font-weight:900!important;line-height:1!important;margin-top:3px!important}
+.freshMetric small{display:block!important;font-size:6.8px!important;font-weight:900!important;line-height:1.05!important;margin-top:3px!important}
+.freshGreen{color:#108d36!important}.freshYellow{color:#9b6200!important}.freshRed{color:#c60013!important}.freshBlue{color:#002b87!important}
+.freshRank{display:grid!important;grid-template-columns:52px 1fr 65px!important;gap:7px!important;align-items:center!important}
+.freshRankIcon{width:46px!important;height:46px!important;border-radius:13px!important;background:linear-gradient(145deg,#16aa4d,#087b31)!important;color:#fff!important;display:grid!important;place-items:center!important;font-size:20px!important;font-weight:900!important}
+.freshRank h3{margin:0!important;color:#002b87!important;font-size:12px!important;line-height:1!important;text-transform:uppercase!important}
+.freshRank p{margin:2px 0 0!important;color:#09235d!important;font-size:8.7px!important;line-height:1.08!important;font-weight:800!important}
+.freshRankBadge{background:#e9f8ef!important;color:#108d36!important;border-radius:999px!important;padding:5px 4px!important;text-align:center!important;font-size:8px!important;font-weight:900!important}
+.freshGrid{display:grid!important;grid-template-columns:1fr 58px!important;gap:3px!important;font-size:8px!important;font-weight:900!important;line-height:1.05!important}
+.freshGrid div{background:#fff!important;border:1px solid #e9edf6!important;border-radius:6px!important;padding:4px 3px!important;min-height:21px!important;display:flex!important;align-items:center!important}
+.freshGrid .head{background:#eef4ff!important;color:#002b87!important;text-transform:uppercase!important;justify-content:center!important;font-size:7.2px!important}
+.freshGrid .status{justify-content:center!important}
+.freshComms{display:grid!important;gap:3px!important}
+.freshMsg{display:grid!important;grid-template-columns:16px 1fr!important;gap:5px!important;align-items:center!important;font-size:7.8px!important;font-weight:900!important;color:#09235d!important;border-bottom:1px solid #e9edf6!important;padding:3px 0!important}
+.freshMsg:last-child{border-bottom:0!important}
+.freshMsg i{width:16px!important;height:16px!important;border-radius:50%!important;background:#002b87!important;color:white!important;display:grid!important;place-items:center!important;font-style:normal!important;font-size:8px!important}
+.freshPriority .actionList{gap:4px!important}
+.freshPriority .actionItem{font-size:7.8px!important;line-height:1.05!important;padding-top:4px!important;gap:5px!important}
+.freshPriority .dotIcon{width:18px!important;height:18px!important;font-size:9px!important}
+.freshPriority .scoreBadge{font-size:6.9px!important;padding:3px 4px!important}
+.freshPriority .actionItem:nth-child(1) .dotIcon{background:#c60013!important}
+.freshPriority .actionItem:nth-child(1) span{background:#ffe5e7!important;color:#c60013!important}
+.freshPriority .actionItem:nth-child(2) .dotIcon{background:#f47b00!important}
+.freshPriority .actionItem:nth-child(2) span{background:#fff1d9!important;color:#9b6200!important}
+.freshPriority .actionItem:nth-child(3) .dotIcon{background:#f47b00!important}
+.freshPriority .actionItem:nth-child(3) span{background:#fff1d9!important;color:#9b6200!important}
+.freshCompact .screenTitle{font-size:11.5px!important;margin-bottom:4px!important}
+</style>
+
+
+<style id="home-priority-maximo-final">
+.priorityMissionRed,.priorityMissionRed *{color:#c60013!important}
+.maximoCard h3,.maximoCard b{color:#002b87!important}
+.maximoCard .roundIcon{background:linear-gradient(145deg,#674bdb,#3f279b)!important}
+</style>
+
+
+<style id="maximo-home-card-polish">
+.maximoCard .roundIcon{background:linear-gradient(145deg,#674bdb,#3f279b)!important}
+</style>
+
+
+<style id="maximo-tile-center-final">
+.maximoTile{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  gap:2px!important;
+  padding:4px 2px!important;
+}
+.maximoTile .tileIcon{
+  margin:0 0 1px 0!important;
+  line-height:1!important;
+}
+.maximoTile .maximoTitle{
+  width:100%!important;
+  text-align:center!important;
+  line-height:1!important;
+}
+.maximoTile small{
+  width:100%!important;
+  display:block!important;
+  text-align:center!important;
+  line-height:1.05!important;
+  margin-top:2px!important;
+}
+</style>
+
+
+<style id="safety-screen-style">
+.safetyCompact{padding:7px 8px 43px!important;overflow:hidden!important}
+.safetyCompact .panel{margin-bottom:6px!important;padding:8px!important}
+.safetyMetricGrid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:5px!important}
+.safetyMetric{background:#fff!important;border:1px solid #e5eaf4!important;border-radius:9px!important;box-shadow:0 3px 9px rgba(0,35,110,.08)!important;padding:8px 2px!important;text-align:center!important;min-height:62px!important}
+.safetyMetric span{display:block!important;color:#000!important;font-size:6.8px!important;font-weight:900!important;text-transform:uppercase!important;line-height:1.08!important}
+.safetyMetric b{display:block!important;font-size:16px!important;line-height:1!important;font-weight:900!important;margin-top:4px!important}
+.safetyMetric small{display:block!important;font-size:7.2px!important;font-weight:900!important;line-height:1.05!important;margin-top:4px!important}
+.safeGreen{color:#108d36!important}.safeYellow{color:#9b6200!important}.safeRed{color:#c60013!important}.safeBlue{color:#002b87!important}
+.safetyGrid{display:grid!important;grid-template-columns:1fr 52px!important;gap:3px!important;font-size:7.7px!important;font-weight:900!important;line-height:1.05!important}
+.safetyGrid div{background:#fff!important;border:1px solid #e9edf6!important;border-radius:6px!important;padding:4px 3px!important;min-height:20px!important;display:flex!important;align-items:center!important}
+.safetyGrid .head{background:#eef4ff!important;color:#002b87!important;text-transform:uppercase!important;justify-content:center!important;font-size:7px!important}
+.safetyGrid .status{justify-content:center!important}
+.safetyPriority .actionList{gap:7px!important}
+.safetyPriority .actionItem{min-height:42px!important;font-size:8.6px!important;line-height:1.1!important;padding-top:6px!important;padding-bottom:4px!important;gap:6px!important}
+.safetyPriority .dotIcon{width:22px!important;height:22px!important;font-size:11px!important}
+.safetyPriority .scoreBadge{font-size:7.2px!important;padding:4px 5px!important}
+.safetyPriority .actionItem:nth-child(1) .dotIcon{background:#f47b00!important}
+.safetyPriority .actionItem:nth-child(1) span{background:#fff1d9!important;color:#9b6200!important}
+.safetyPriority .actionItem:nth-child(2) .dotIcon{background:#c60013!important}
+.safetyPriority .actionItem:nth-child(2) span{background:#ffe5e7!important;color:#c60013!important}
+.safetyTopics{display:grid!important;gap:4px!important}
+.safetyTopic{display:grid!important;grid-template-columns:17px 1fr!important;gap:5px!important;align-items:center!important;font-size:8px!important;font-weight:900!important;color:#09235d!important;border-bottom:1px solid #e9edf6!important;padding:4px 0!important}
+.safetyTopic:last-child{border-bottom:0!important}
+.safetyTopic i{width:17px!important;height:17px!important;border-radius:50%!important;background:#e0a000!important;color:white!important;display:grid!important;place-items:center!important;font-style:normal!important;font-size:8px!important}
+.safetyCompact .screenTitle{font-size:11.5px!important;margin-bottom:4px!important}
+</style>
+
+</head><body>
+<div class="device"><div class="brand">▰ ZEBRA</div><div class="screen"><div class="app" id="app"></div></div><div class="phoneBtns"><span>◀</span><span>●</span><span>■</span></div></div>
+<script>
+const logo='data:image/png;base64,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';
+function icon(name){const s={production:'<svg viewBox="0 0 24 24"><path d="M5 19V9l4 3V8l4 4V8l6 4v7H5z"/><path d="M8 19v-4M12 19v-4M16 19v-4"/></svg>',temperature:'<svg viewBox="0 0 24 24"><path d="M10 14.5V5a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><path d="M12 6v10"/></svg>',replenishment:'<svg viewBox="0 0 24 24"><path d="M6 6h2l2 10h8l2-7H9"/><circle cx="11" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>',ordering:'<svg viewBox="0 0 24 24"><rect x="7" y="4" width="10" height="16" rx="1.5"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>',freshstart:'<svg viewBox="0 0 24 24"><path class="fillIcon" d="M12 3l2.6 5.4 5.9.8-4.3 4.2 1 5.9L12 16.5 6.8 19.3l1-5.9L3.5 9.2l5.9-.8L12 3z"/></svg>',shrink:'<svg viewBox="0 0 24 24"><path class="fillIcon" d="M3 12l9-9h8v8l-9 9L3 12z"/><circle cx="17" cy="7" r="1.5" fill="white"/></svg>',inventory:'<svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 7v10l8 4 8-4V7M12 11v10"/></svg>',safety:'<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 10-4-2.5-7-5.5-7-10V6l7-3z"/></svg>',food:'<svg viewBox="0 0 24 24"><path d="M6 3v8M9 3v8M6 7h3M15 3v18M18 3v18"/></svg>',labor:'<svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c.6-4 3-6 5-6s4.4 2 5 6M11 20c.5-3.5 2.6-5.5 5-5.5 2.4 0 4.4 2 5 5.5"/></svg>',tasks:'<svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="1.5"/><path d="M9 8h6M9 12h6M9 16h6"/></svg>',sales:'<svg viewBox="0 0 24 24"><path d="M4 18h16M6 16l4-4 3 3 5-7"/><path d="M15 8h3v3"/></svg>',guided:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 12l7-7"/><path d="M17 5h2v2"/></svg>'};return s[name]||''}
+const ops=[['production','production','Production','c-production'],['temperature','temperature','Temperature','c-temperature'],['replenishment','replenishment','Replenishment','c-replenishment'],['ordering','ordering','Orders','c-ordering'],['freshstart','freshstart','Fresh Start','c-freshstart'],['shrink','shrink','Shrink','c-shrink'],['inventory','inventory','Inventory','c-inventory'],['safety','safety','Safety','c-safety'],['food','food','Food Safety','c-food'],['labor','labor','Labor','c-labor'],['tasks','tasks','Priority Missions','c-tasks'],['sales','sales','Sales','c-sales']];
+function topHome(){return `<div class="top"><div class="status"><span>10:30 AM</span><span>◢ ▲ ▌</span></div><div class="bar"><button class="hamb" onclick="openScreen('menu')">☰</button><div class="title"><h1>F.R.I.E.N.D.</h1><small>FULL RETAIL INTEGRATION<br>ENGAGED NETWORK DYNAMICS</small></div><div class="bell">♧<span class="badge">7</span></div></div><div class="store"><img class="logo" src="${logo}"><div><h2>Store #129</h2><p>1000 Vista Pkwy</p><p>Erie, CO 80516</p></div><div class="open">Open 6:00 AM - 10:00 PM<br>Store Status<br><span class="dot"></span>Open</div></div></div><div class="date"><span>▣ Today is May 12, 2024</span><span>↻ Last Updated: 9:45 AM</span></div>`}
+function footer(){return `<div class="footer"><span>▢ Data Secure</span><span>F.R.I.E.N.D. v2.4.1</span></div>`}
+function home(){return topHome()+`<div class="content"><div class="hero"><div class="miniStats"><button class="card mini" onclick="openScreen(\'maximo\')"><div class="label">OPEN MAXIMO</div><div class="num red">12</div><small>View All</small></button><button class="card mini" onclick="openScreen('composite')"><div class="label">Readiness</div><div class="num green">94%</div><small>On Track</small></button></div><button class="priority" onclick="openScreen('associate')"><div class="warn">⚠</div><div class="ptext">PRIORITY MISSION<br>Hot Holding Temperature Check<br>Deli • Hot Case<br>Assigned to Alex</div><div class="time">EST. TIME: 4 MIN</div></button><div class="miniStats"><button class="card mini" onclick="openScreen('food')"><div class="label">Compliance</div><div class="num green">98%</div><small>On Track</small></button><button class="card mini" onclick="openScreen('alerts')"><div class="label">Alerts</div><div class="num red">2</div><small>Action Required</small></button></div></div><div class="card action"><button onclick="openScreen('associate')"><div class="roundIcon">👤</div><div><h3>ASSOCIATE MODE</h3><p>Welcome Alex, Fresh Start and<br>guided mission workflow</p></div><div class="chev">›</div></button></div><div class="card ops"><div class="opsTitle">STORE OPERATIONS</div><div class="opsGrid">${ops.map(o=>`<button class="opTile ${o[3]}" onclick="openScreen('${o[0]}')">${icon(o[1])}${o[2]}</button>`).join('')}<button class="opTile guided" onclick="openScreen('mission')">${icon('guided')}<div><b>GUIDED MISSIONS</b><small>View your assigned<br>missions</small></div><div class="chev">›</div></button></div></div><div class="homeNav"><button class="card tile maximoTile" onclick="openScreen('maximo')"><div class="tileIcon">🛠</div><div class="maximoTitle">MAXIMO</div><small>Equipment • Facilities</small></button><button class="card tile" onclick="openScreen('alerts')"><span class="badge2">2</span><div class="tileIcon">🔔</div>Alerts<small>Action Required</small></button><button class="card tile" onclick="openScreen('composite')"><div class="tileIcon">▥</div>Metrics<small>Key Performance</small></button><button class="card tile" onclick="openScreen('leader')"><div class="tileIcon">👥</div>Team<small>Leader View</small></button></div></div>`+footer()}
+
+function detailTop(title, subtitle='F.R.I.E.N.D. WORKFLOW'){return `<div class="top"><div class="status"><span>10:30 AM</span><span>◢ ▲ ▌</span></div><div class="bar"><button class="back" onclick="openScreen('home')">‹</button><div class="title"><h1 style="font-size:18px;letter-spacing:0">${title}</h1><small>${subtitle}</small></div><div class="bell">♧<span class="badge">7</span></div></div></div>`}
+function associate(){return detailTop('ASSOCIATE MODE','WELCOME ALEX')+`<div class="content stepWrap"><div class="panel assocHero"><div class="avatar">A</div><div><div class="screenTitle">Welcome Alex</div><div class="subtle">Your priority mission is ready. Complete each guided step and F.R.I.E.N.D. will update leader visibility automatically.</div></div></div><div class="panel"><div class="missionCard"><div class="roundIcon">🌡</div><div><h3 style="margin:0 0 3px;color:#002b87;font-size:14px">HOT HOLDING TEMPERATURE CHECK</h3><div class="subtle">Deli • Hot Case #2 • Est. Time 4 Min</div></div><div class="badgeP">HIGH</div></div><button class="cta" onclick="openScreen('mission')">START GUIDED MISSION</button><button class="cta ctaLight" onclick="openScreen('maximo')" style="margin-top:6px">BROWSE MAXIMO</button></div><div class="panel"><div class="screenTitle" style="font-size:14px">How Associate Mode Works</div><div class="checkList"><div class="checkItem"><i>✓</i>Follow one guided step at a time</div><div class="checkItem"><i>✓</i>Record the correct location and method</div><div class="checkItem"><i>✓</i>Leader dashboards update automatically</div></div></div></div>`+footer()}
+function mission(){return detailTop('GUIDED MISSION','DELI HOT CASE #2')+`<div class="content stepWrap"><div class="panel"><div class="screenTitle">Hot Holding Temperature Check</div><div class="subtle">Confirm safe hot holding temperature using the correct thermometer method.</div><div class="progressTop"><div style="width:20%"></div></div></div><div class="smallGrid"><div class="infoBox"><b>165°F</b><span>Target</span></div><div class="infoBox"><b>4 Min</b><span>Est. Time</span></div></div><div class="panel"><div class="missionCard"><div class="roundIcon">📍</div><div><h3 style="margin:0 0 3px;color:#002b87;font-size:14px">Record Location</h3><div class="subtle">Deli → Hot Case #2</div></div><div class="chev">›</div></div><button class="cta" onclick="openScreen('thermometer')">CONTINUE</button></div></div>`+footer()}
+function thermometer(){return detailTop('TEMPERATURE CHECK','SELECT METHOD')+`<div class="content stepWrap"><div class="panel"><div class="screenTitle">Select Thermometer</div><div class="subtle">Choose the correct measurement method for the hot case product.</div></div><button class="optionRow" onclick="openScreen('sanitize')"><div class="oicon">🌡</div><div><h4>1. Probe Thermometer</h4><p>Required for internal product temperature checks. Recommended.</p></div><div class="radioDot on"></div></button><button class="optionRow orange" onclick="openScreen('sanitize')"><div class="oicon">⌁</div><div><h4>2. Infrared</h4><p>Surface temperature only. Not preferred for this mission.</p></div><div class="radioDot"></div></button><button class="optionRow purple" onclick="openScreen('sanitize')"><div class="oicon">⌁</div><div><h4>3. Bluetooth</h4><p>Wireless thermometer option when available.</p></div><div class="radioDot"></div></button><div class="panel"><div class="checkItem"><i>✓</i>Selected method: Probe Thermometer</div></div></div>`+footer()}
+function sanitize(){return detailTop('SANITIZE PROBE','REQUIRED STEP')+`<div class="content stepWrap"><div class="panel"><div class="screenTitle">Sanitize Probe Thermometer</div><div class="subtle">Clean and sanitize the probe before inserting it into product.</div></div><div class="panel" style="text-align:center"><div style="font-size:54px;line-height:1">🧼🌡</div><div class="screenTitle" style="font-size:14px;margin-top:6px">Probe Sanitized</div><div class="subtle">This protects food safety, prevents cross-contamination, and keeps the process compliant.</div><button class="cta" onclick="openScreen('takeTemp')">I SANITIZED THE PROBE</button></div></div>`+footer()}
+function takeTemp(){return detailTop('TAKE TEMPERATURE','PROBE THERMOMETER')+`<div class="content stepWrap"><div class="panel"><div class="missionCard"><div class="roundIcon">📍</div><div><h3 style="margin:0 0 3px;color:#002b87;font-size:14px">Location</h3><div class="subtle">Deli → Hot Case #2</div></div><div class="chev">✓</div></div></div><div class="smallGrid"><div class="infoBox"><b>165°F</b><span>Target</span></div><div class="infoBox"><b>171°F</b><span>Actual</span></div></div><div class="panel" style="text-align:center"><div style="font-size:34px">🌡</div><div class="screenTitle" style="font-size:14px">Probe Thermometer</div><div class="infoBox" style="margin:7px 0"><b class="tempRead">171°F</b><span>Recorded Temperature</span></div><div class="statusPill">Within Standard</div><button class="cta" onclick="openScreen('dataRecorded')">RECORD TEMPERATURE</button></div></div>`+footer()}
+function dataRecorded(){return detailTop('DATA RECORDED','SYSTEM UPDATE')+`<div class="content stepWrap"><div class="panel" style="text-align:center"><div class="bigCheck">✓</div><div class="screenTitle">Temperature Recorded</div><div class="subtle">Location and temperature data have been saved.</div></div><div class="smallGrid"><div class="infoBox"><b>171°F</b><span>Actual</span></div><div class="infoBox"><b>3:42</b><span>Time</span></div></div><div class="panel"><div class="checkList"><div class="checkItem"><i>✓</i>Data Recorded</div><div class="checkItem"><i>✓</i>Dashboard Updated</div><div class="checkItem"><i>✓</i>Leader Notified</div></div><button class="cta" onclick="openScreen('complete')">COMPLETE MISSION</button></div></div>`+footer()}
+function complete(){return detailTop('MISSION COMPLETE','GREAT WORK ALEX')+`<div class="content stepWrap"><div class="panel" style="text-align:center"><div class="bigCheck">✓</div><div class="screenTitle">Mission Complete</div><div class="subtle">Great Work Alex!</div></div><div class="kpi3"><div class="infoBox"><b>100%</b><span>Compliance</span></div><div class="infoBox"><b>3:42</b><span>On Track</span></div><div class="infoBox"><b>171°F</b><span>Recorded</span></div></div><div class="panel"><div class="checkList"><div class="checkItem"><i>✓</i>Jamie has been notified</div><div class="checkItem"><i>✓</i>Joey's Store Leader Dashboard has been updated</div><div class="checkItem"><i>✓</i>Compliance updated to 100%</div></div><button class="cta ctaBlue" onclick="openScreen('maximo')">RETURN TO MISSIONS</button></div></div>`+footer()}
+function missions(){return detailTop('GUIDED MISSIONS','ASSOCIATE QUEUE')+`<div class="content stepWrap"><div class="panel"><div class="screenTitle">Assigned Missions</div><div class="subtle">Completed mission is now visible to Jamie and Joey.</div></div><div class="panel missionCard"><div class="roundIcon">✓</div><div><h3 style="margin:0 0 3px;color:#108d36;font-size:14px">Hot Holding Temperature Check</h3><div class="subtle">Complete • 171°F • 3:42 • Compliance 100%</div></div><div class="chev">›</div></div><button class="cta ctaBlue" onclick="openScreen('home')">BACK HOME</button></div>`+footer()}
+
+
+
+
+
+function productionScreen(){
+ const rows=[
+  ["Deli","84","Heather engaged in Production Mission"],
+  ["Bakery","92","Beth engaged in Thaw & Sell Mission"],
+  ["Meat","96","David engaged in Thaw & Sell Mission"],
+  ["Murray’s Cheese","78","Jackie engaged in Production Mission"],
+  ["Starbucks","88","Roman engaged in Thaw & Sell Mission"],
+  ["Seafood","91","Amber engaged in Thaw & Sell Mission"]
+ ];
+ return detailTop('PRODUCTION','STORE #129 OPERATIONAL VIEW')+`<div class="content stepWrap prodCompact">
+ <div class="panel moduleHero"><div class="moduleIcon mBlue">🔥</div><div><h3>PRODUCTION</h3><p>Forecast execution across fresh departments.</p></div><div class="scoreBadge alertBadge">Support</div></div>
+ <div class="smallGrid"><div class="infoBox"><b>84%</b><span>Current</span></div><div class="infoBox"><b>6</b><span>Areas</span></div></div>
+ <div class="panel prodBars"><div class="screenTitle">Production Readiness</div>
+ <div class="prodLegend"><span class="r">0–50 Red</span><span class="y">50–75 Yellow</span><span class="g">75–100 Green</span></div>
+ ${rows.map(x=>`<div class="prodBarRow"><span>${x[0]}</span><div><div class="prodMeter"><i class="prodMarker" style="left:${x[1]}%"></i></div><div class="prodTicks"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></div><b>${x[1]}%</b></div><div class="engagedText">${x[2]}</div>`).join('')}
+ </div>
+ <div class="panel prodActions"><div class="screenTitle">Production Actions</div><div class="actionList">
+ <div class="actionItem"><div class="dotIcon">1</div><div>Connect with Murray’s Cheese about over production.</div><span class="scoreBadge">High</span></div>
+ <div class="actionItem"><div class="dotIcon">2</div><div>Verify Starbucks display case is to PAR and schematic.</div><span class="scoreBadge">Picture</span></div>
+ <div class="actionItem"><div class="dotIcon">3</div><div>Confirm Seafood case is filled to sales volume and to schematic.</div><span class="scoreBadge">Ready</span></div>
+ </div><button class="cta ctaBlue" onclick="openScreen('inventory')">NEXT: INVENTORY</button></div>
+ </div>`+footer()
+}
+
+
+function inventoryScreen(){
+ const depts=[
+  ["Grocery","96","8 complete • 2 outstanding"],
+  ["HBC","91","5 complete • 1 outstanding"],
+  ["GM","88","4 complete • 2 outstanding"],
+  ["Dairy","94","6 complete • 1 outstanding"],
+  ["Meat","97","7 complete • 0 outstanding"],
+  ["Seafood","92","4 complete • 1 outstanding"],
+  ["Deli","89","5 complete • 2 outstanding"],
+  ["Bakery","93","6 complete • 1 outstanding"],
+  ["Murray’s Cheese","86","3 complete • 2 outstanding"],
+  ["Starbucks","90","4 complete • 1 outstanding"],
+  ["Produce","95","7 complete • 1 outstanding"]
+ ];
+ return detailTop('INVENTORY','STORE #129 OPERATIONAL VIEW')+`<div class="content stepWrap prodCompact">
+ <div class="panel moduleHero"><div class="moduleIcon mBlue">📦</div><div><h3>INVENTORY</h3><p>On-hand accuracy, OOS, OSA, counts, and department inventory accuracy.</p></div><div class="scoreBadge goodBadge">On Track</div></div>
+ <div class="invMetricGrid">
+  <div class="invMetric"><b>96%</b><span>On Hand Accuracy</span><small class="green">▲ vs Yesterday</small></div>
+  <div class="invMetric oosMetric"><b>7</b><span>OOS</span><small>Action</small></div>
+  <div class="invMetric"><b>94%</b><span>OSA</span><small class="green">Visible</small></div>
+  <div class="invMetric"><b>59/74</b><span>Counts</span><small>15 Outstanding</small></div>
+ </div>
+ <div class="panel invDeptPanel"><div class="screenTitle" style="font-size:12px">Department Inventory Accuracy</div>
+ ${depts.map(x=>`<div class="invDeptRow"><span>${x[0]}</span><div><div class="invAccTrack"><i class="invAccMark" style="left:${x[1]}%"></i></div><div class="invTicks"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></div><b>${x[1]}%</b></div><div class="invCounts">Counts: ${x[2]}</div>`).join('')}
+ </div>
+ <div class="panel invActions inventoryPriority"><div class="screenTitle" style="font-size:12px">Inventory Priority Missions</div><div class="actionList">
+ <div class="actionItem"><div class="dotIcon">1</div><div>Address OOS items and assign replenishment follow-up.</div><span class="scoreBadge">OOS</span></div>
+ <div class="actionItem"><div class="dotIcon">2</div><div>Complete outstanding yellow counts before afternoon review.</div><span class="scoreBadge">Counts</span></div>
+ <div class="actionItem"><div class="dotIcon">3</div><div>Verify OSA and OHA for departmental accountability and customer satisfaction.</div><span class="scoreBadge goodBadge">Ready</span></div>
+ </div><button class="cta ctaBlue" onclick="openScreen('home')">BACK HOME</button></div>
+ </div>`+footer()
+}
+
+
+
+
+function shrinkScreen(){
+ const depts=[
+  ["Meat","42","High-value trim and markdown review"],
+  ["Seafood","38","Case fill and freshness risk"],
+  ["Grocery","22","Known-loss and damaged goods"],
+  ["GM","18","Low movement markdown risk"],
+  ["HBC","24","High shrink item review"],
+  ["Produce","35","Culling and freshness risk"],
+  ["Murray’s Cheese","31","Specialty over-production"],
+  ["Starbucks","28","Grab-and-go waste review"],
+  ["Dairy","19","Date rotation risk"],
+  ["Deli","47","Top driver: Deli Waste"],
+  ["Bakery","34","Thaw and sell recovery"]
+ ];
+ return detailTop('SHRINK','STORE #129 OPERATIONAL VIEW')+`<div class="content stepWrap prodCompact">
+ <div class="panel moduleHero"><div class="moduleIcon mRed">🏷</div><div><h3>SHRINK</h3><p>Shrink risk, top drivers, recovery, and actionable loss prevention missions.</p></div><div class="scoreBadge warnBadge">Medium</div></div>
+
+ <div class="shrinkMetricGrid">
+  <div class="shrinkMetric"><span class="tileTitle">Shrink Risk</span><b class="tileValue darkYellow">Medium</b><small class="tileTrend redValue">▲ vs Yesterday</small></div>
+  <div class="shrinkMetric"><span class="tileTitle">Top Driver</span><b class="tileValue redValue">Deli Waste</b><small class="tileTrend greenValue">▼ vs Yesterday</small></div>
+  <div class="shrinkMetric"><span class="tileTitle">Recovery</span><b class="tileValue greenValue">+9%</b><small class="tileTrend greenValue">▲ vs Yesterday</small></div>
+  <div class="shrinkMetric"><span class="tileTitle">Action Items</span><b class="tileValue redValue">6</b><small class="tileTrend redValue">▼ vs Yesterday</small></div>
+ </div>
+
+ <div class="panel shrinkDeptPanel"><div class="screenTitle" style="font-size:12px">Department Shrink Risk</div>
+ ${depts.map(x=>`<div class="shrinkDeptRow"><span>${x[0]}</span><div><div class="shrinkTrack"><i class="shrinkMark" style="left:${x[1]}%"></i></div><div class="shrinkTicks"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></div><b>${x[1]}%</b></div><div class="shrinkNote">${x[2]}</div>`).join('')}
+ </div>
+
+ <div class="panel shrinkPriority"><div class="screenTitle" style="font-size:12px">Shrink Priority Missions</div><div class="actionList">
+  <div class="actionItem"><div class="dotIcon">1</div><div>Review over production with Deli Leader Jamie.</div><span class="scoreBadge">Overdue</span></div>
+  <div class="actionItem"><div class="dotIcon">2</div><div>Address action items in affected areas during ESW.</div><span class="scoreBadge">ESW</span></div>
+  <div class="actionItem"><div class="dotIcon">3</div><div>Complete cooler/freezer audits and review Markdown Effectiveness Report.</div><span class="scoreBadge goodBadge">Ready</span></div>
+ </div><button class="cta ctaBlue" onclick="openScreen('home')">BACK HOME</button></div>
+ </div>`+footer()
+}
+
+
+function replenishmentScreen(){
+ const rows=[
+  ["Meat","David","18","88"],
+  ["Packaged Meat","Chris","12","86"],
+  ["Seafood","Amber","11","91"],
+  ["Packaged Seafood","Tyler","8","84"],
+  ["Bakery","Beth","14","93"],
+  ["Murray’s Cheese","Jackie","9","82"],
+  ["Grocery","Mike","34","92"],
+  ["GM","Sarah","17","89"],
+  ["HBC","Jennifer","13","87"],
+  ["Dairy","Kevin","16","94"],
+  ["Deli","Heather","21","90"],
+  ["Deli Packaged","Alex","12","88"],
+  ["Produce","Roman","25","96"],
+  ["Produce Packaged","Ashley","15","91"]
+ ];
+ return detailTop('REPLENISHMENT','STORE #129 OPERATIONAL VIEW')+`<div class="content stepWrap prodCompact">
+ <div class="panel moduleHero"><div class="moduleIcon mGreen">🛒</div><div><h3>REPLENISHMENT</h3><p>Associate guided missions from coolers/freezers to shelf with FIFO verification.</p></div><div class="scoreBadge goodBadge">Improving</div></div>
+
+ <div class="repMetricGrid">
+  <div class="repMetric"><span>Current Store Replenishment Avg</span><b class="repGreen">91%</b><small class="repGreen">On Track</small></div>
+  <div class="repMetric"><span>Store Profile Status</span><b class="repGreen">Improving</b><small class="repGreen">▲ Trend</small></div>
+  <div class="repMetric"><span>Assigned Associates</span><b class="repBlue">14</b><small>Active</small></div>
+  <div class="repMetric"><span>OPEN MAXIMO</span><b class="repBlue">22</b><small>Today</small></div>
+ </div>
+
+ <div class="panel repDeptPanel"><div class="screenTitle" style="font-size:12px">Replenishment Assignments</div>
+ ${rows.map(x=>`<div class="repRow"><span>${x[0]}</span><div class="repTrack"><div style="width:${x[3]}%"></div></div><b>${x[2]}</b></div><div class="repAssign">${x[1]} assigned • ${x[2]} items • guided cooler/freezer mission</div>`).join('')}
+ </div>
+
+ <div class="panel repPriority"><div class="screenTitle" style="font-size:12px">Replenishment Priority Missions</div><div class="actionList">
+  <div class="actionItem"><div class="dotIcon">1</div><div>Observe OSA during ESW and connect with associate assigned replenishment mission.</div><span class="scoreBadge">Open</span></div>
+  <div class="actionItem"><div class="dotIcon">2</div><div>Confirm with department leader compliance/presentation and address concerns.</div><span class="scoreBadge">Trending Up</span></div>
+  <div class="actionItem"><div class="dotIcon">3</div><div>Confirm schematics/displays are set to standard and Store Merchandiser Guide.</div><span class="scoreBadge">Needs Improvement</span></div>
+ </div></div>
+ </div>`+footer()
+}
+function repMission(){
+ return detailTop('REPLENISHMENT MISSION','FIFO VERIFICATION')+`<div class="content stepWrap prodCompact">
+ <div class="panel moduleHero"><div class="moduleIcon mGreen">📦</div><div><h3>Deli Replenishment</h3><p>Associate: Heather • Deli Cooler • 21 items remaining</p></div><div class="scoreBadge goodBadge">Open</div></div>
+ <div class="panel"><div class="screenTitle" style="font-size:12px">Step 1: Acquire Product</div><div class="fifoBox">Proceed to Deli Cooler. Locate: Chicken Salad 5 lb.</div></div>
+ <div class="panel"><div class="screenTitle" style="font-size:12px">Step 2: Scan Box</div><div class="fifoBox">Scan the case barcode to verify the correct product before moving it to the sales floor.</div><button class="cta" onclick="openScreen('repFifo')">SCAN BOX</button></div>
+ </div>`+footer()
+}
+function repFifo(){
+ return detailTop('FIFO VERIFIED','COMPANY POLICY')+`<div class="content stepWrap prodCompact">
+ <div class="panel" style="text-align:center"><div class="bigCheck">✓</div><div class="screenTitle">Correct Item Verified</div><div class="subtle">Chicken Salad 5 lb • Deli Cooler</div></div>
+ <div class="panel"><div class="screenTitle" style="font-size:12px">FIFO Verification</div><div class="fifoBox"><b>First In First Out</b><br>Oldest date selected and verified before replenishment.</div></div>
+ <div class="panel"><div class="checkList"><div class="checkItem"><i>✓</i>Box scanned</div><div class="checkItem"><i>✓</i>Correct item confirmed</div><div class="checkItem"><i>✓</i>Oldest date selected</div><div class="checkItem"><i>✓</i>Replenishment updated</div></div><button class="cta ctaBlue" onclick="openScreen('replenishment')">RETURN TO REPLENISHMENT</button></div>
+ </div>`+footer()
+}
+
+
+function foodSafetyScreen(){
+ const depts=[
+  ["Meat","89","▼ Exception review needed","red"],
+  ["Seafood","98","▲ On track","green"],
+  ["Produce","97","▲ On track","green"],
+  ["Bakery","96","▲ On track","green"],
+  ["Dairy","92","▼ Markdown follow-up","green"],
+  ["Murray’s Cheese","95","▲ On track","green"],
+  ["Starbucks","99","▲ No issues","green"]
+ ];
+ return detailTop('FOOD SAFETY','STORE #129 OPERATIONAL VIEW')+`<div class="content stepWrap foodCompact">
+ <div class="panel moduleHero"><div class="moduleIcon mTeal">🛡</div><div><h3>FOOD SAFETY</h3><p>Temperature logs, audit readiness, FAST status, and guided compliance missions.</p></div><div class="scoreBadge goodBadge">Low Risk</div></div>
+
+ <div class="foodMetricGrid">
+  <div class="foodMetric"><span>Temp Logs</span><b class="foodGreen">96%</b><small class="foodGreen">▲ vs Yesterday</small></div>
+  <div class="foodMetric"><span>Audits Due</span><b class="foodYellow">3</b><small class="foodYellow">Immediate Attention Required</small></div>
+  <div class="foodMetric"><span>Risk Level</span><b class="foodGreen">Low</b><small class="foodGreen">Controlled</small></div>
+  <div class="foodMetric"><span>FAST</span><b class="foodGreen">No Issues</b><small class="foodGreen">Clear</small></div>
+ </div>
+
+ <div class="panel foodDeptPanel"><div class="screenTitle" style="font-size:12px">Department Food Safety Score</div>
+ ${depts.map(x=>`<div class="foodDeptRow"><span>${x[0]}</span><div class="foodTrend ${x[3]=='red'?'foodRed':'foodGreen'}">${x[2]}</div><b class="foodScore ${x[3]=='red'?'foodRed':'foodGreen'}">${x[1]}%</b></div>`).join('')}
+ </div>
+
+ <div class="panel foodPriority"><div class="screenTitle" style="font-size:12px">Food Safety Guided Missions</div><div class="actionList">
+  <div class="actionItem"><div class="dotIcon">1</div><div>Review Food Safety Exceptions with Meat Dept Leader David.</div><span class="scoreBadge">Overdue</span></div>
+  <div class="actionItem"><div class="dotIcon">2</div><div>Verify Deli temperature validation with Alex and address production concerns with Dept Leader Jamie.</div><span class="scoreBadge">Due Today</span></div>
+  <div class="actionItem"><div class="dotIcon">3</div><div>Verify Markdown Program implementation/follow through in Dairy with Dept Leader Kevin.</div><span class="scoreBadge">Due Today</span></div>
+ </div><button class="cta ctaBlue" onclick="openScreen('home')">BACK HOME</button></div>
+ </div>`+footer()
+}
+
+
+function orderingScreen(){
+ const rows=[
+  ["Grocery","Mike","open"],
+  ["Dairy","Kevin","open"],
+  ["Meat","David","open"],
+  ["Seafood","Amber","open"],
+  ["Bakery","Beth","open"],
+  ["Deli","Jamie","closed"],
+  ["Starbucks","Roman","closed"],
+  ["Murray’s Cheese","Jackie","closed"],
+  ["GM","Sarah","closed"],
+  ["HBC","Jennifer","closed"],
+  ["Liquor","Carlos","closed"],
+  ["Maintenance","Eddie","closed"]
+ ];
+ return detailTop('ORDERING','STORE #129 OPERATIONAL VIEW')+`<div class="content stepWrap orderCompact">
+ <div class="panel moduleHero"><div class="moduleIcon mPurple">🛒</div><div><h3>ORDERING</h3><p>Order accuracy, open orders, CAO review, and vendor gap guided follow-up.</p></div><div class="scoreBadge goodBadge">93%</div></div>
+
+ <div class="orderMetricGrid">
+  <div class="orderMetric"><span>Order Accuracy</span><b class="orderGreen">93%</b><small class="orderGreen">▲ vs Yesterday</small></div>
+  <div class="orderMetric"><span>Open Orders</span><b class="orderBlue">5</b><small>Needs Review</small></div>
+  <div class="orderMetric"><span>CAO Dept Review</span><b class="orderYellow">5</b><small>Due Today</small></div>
+  <div class="orderMetric"><span>Vendor Gaps</span><b class="orderRed">3</b><small class="orderRed">Action</small></div>
+ </div>
+
+ <div class="panel orderDeptPanel"><div class="screenTitle" style="font-size:12px">Ordering Guided Missions</div>
+ ${rows.map(x=>`<div class="orderRow"><span>${x[0]}</span><div class="orderLeader">Assign ordering to Dept Leader: ${x[1]}</div><button class="assistBtn ${x[2]=='closed'?'closed':''}">Assisted Ordering</button></div>`).join('')}
+ </div>
+ </div>`+footer()
+}
+
+const moduleData={
+ production:['PRODUCTION','🔥','mBlue','Forecast execution and department production readiness','84%','Needs Support',['Deli','84'],['Bakery','92'],['Meat','96']],
+ inventory:['INVENTORY','📦','mBlue','Counts, backroom accuracy, and out-of-stock visibility','96%','On Track',['Counts','96'],['Outs','7'],['Accuracy','96']],
+ shrink:['SHRINK','🏷','mRed','Waste risk, recovery actions, and high-loss opportunities','Medium','Action Needed',['Deli Waste','78'],['Recovery','88'],['Markdowns','91']],
+ food:['FOOD SAFETY','🛡','mTeal','Temperature logs, compliance, and food safety follow-up','98%','Compliant',['Temp Logs','98'],['Sanitize','100'],['Audits','96']],
+ labor:['LABOR','👥','mPurple','Scheduled hours, overtime exposure, and coverage support','12.6%','Watch',['Scheduled','94'],['Actual','91'],['OT Risk','76']],
+ sales:['SALES','📈','mGreen','Sales performance, forecast, and customer readiness','$142K','Strong',['Vs Plan','103'],['Basket','96'],['Forecast','101']],
+ tasks:['PRIORITY MISSIONS','✓','mBlue','Open tasks, overdue items, and guided follow-up','22','Open',['Due Today','9'],['Overdue','3'],['Complete','87']],
+ alerts:['ALERTS','🔔','mRed','Critical items requiring leader or associate attention','2','Action Required',['Food Safety','98'],['Labor Risk','76'],['Production','84']],
+ ordering:['ORDERS','🛒','mPurple','Open orders, vendor gaps, and fill-rate visibility','14','Open',['Due Today','5'],['Fill Rate','97'],['Vendor Gaps','2']],
+ replenishment:['REPLENISHMENT','🛒','mGreen','Shelf recovery, fill gaps, and high movement items','91%','Improving',['Produce','97'],['Deli','89'],['Grocery','93']],
+ freshstart:['FRESH START','⭐','mTeal','Daily readiness, learning tasks, and start-of-shift alignment','98%','Complete',['Alex','100'],['Team','98'],['Follow-up','92']],
+ safety:['SAFETY','⚠','mGold','Store safety checks, incidents, and training follow-up','0','Incidents',['Inspections','100'],['Training','94'],['Risk','90']],
+ composite:['METRICS','▥','mBlue','Store health, readiness, and executive visibility','94%','Strong',['Composite','94'],['Mission','91'],['Ready','96']],
+ leader:['LEADER HUB','👥','mPurple','Jamie and Joey visibility, coaching, and escalation support','2','At Risk',['Jamie View','96'],['Joey View','94'],['Escalations','2']],
+ team:['TEAM','👥','mGreen','Associate support, leader follow-up, and department readiness','97%','On Track',['Alex','100'],['Jamie','96'],['Joey','94']],
+ menu:['MENU','☰','mBlue','Quick navigation for the F.R.I.E.N.D. demo app','Ready','Active',['Home','100'],['Screens','Active'],['Buttons','No Dead']]
+};
+function moduleScreen(k){
+ const d=moduleData[k]||moduleData.tasks;
+ const badgeClass=(String(d[5]).includes('Action')||String(d[5]).includes('Risk')||String(d[5]).includes('Support'))?'alertBadge':(String(d[5]).includes('Watch')?'warnBadge':'goodBadge');
+ return detailTop(d[0], 'STORE #129 OPERATIONAL VIEW')+`<div class="content stepWrap">
+ <div class="panel moduleHero"><div class="moduleIcon ${d[2]}">${d[1]}</div><div><h3>${d[0]}</h3><p>${d[3]}</p></div><div class="scoreBadge ${badgeClass}">${d[5]}</div></div>
+ <div class="smallGrid"><div class="infoBox"><b>${d[4]}</b><span>Current</span></div><div class="infoBox"><b>${d[5]}</b><span>Status</span></div></div>
+ <div class="panel">${[d[6],d[7],d[8]].map(x=>`<div class="barRow"><span>${x[0]}</span><div class="track2"><div style="width:${parseInt(x[1])||88}%"></div></div><b>${x[1]}${String(x[1]).match(/^\d+$/)?'%':''}</b></div>`).join('')}</div>
+ <div class="panel"><div class="screenTitle" style="font-size:14px">${d[0]} Actions</div><div class="actionList">
+ <div class="actionItem"><div class="dotIcon">1</div><div>Review highest priority item and confirm next action.</div><span class="scoreBadge">Open</span></div>
+ <div class="actionItem"><div class="dotIcon">2</div><div>Update leader visibility when completed.</div><span class="scoreBadge goodBadge">Ready</span></div>
+ <div class="actionItem"><div class="dotIcon">3</div><div>Return to Home or continue guided work.</div><span class="scoreBadge">Next</span></div>
+ </div><button class="cta ctaBlue" onclick="openScreen('home')">BACK HOME</button></div>
+ </div>`+footer()
+}
+
+
+
+
+
+
+
+
+function safetyScreen(){
+return detailTop('SAFETY','COMPLIANCE • EQUIPMENT • ASSOCIATE SAFETY')+`
+<div class="content safetyCompact">
+<div class="panel"><div class="screenTitle">Safety Overview</div><div class="safetyMetricGrid">
+<div class="safetyMetric"><span>Days Without Injury</span><b class="safeGreen">145</b><small class="safeGreen">On Track</small></div>
+<div class="safetyMetric"><span>Training Due</span><b class="safeRed">16</b><small>Assignments</small></div>
+<div class="safetyMetric"><span>Risk Level</span><b class="safeGreen">Low</b><small class="safeGreen">VS LY</small></div>
+<div class="safetyMetric"><span>Store Safety Score</span><b class="safeGreen">96%</b><small class="safeGreen">Total Store</small></div>
+</div></div>
+
+<div class="panel"><div class="screenTitle">Safety Compliance</div><div class="safetyGrid">
+<div class="head">Category</div><div class="head">Status</div>
+<div>Slicer Inspections</div><div class="status safeGreen">100%</div>
+<div>Oven Inspections</div><div class="status safeGreen">98%</div>
+<div>Baler Inspections</div><div class="status safeGreen">96%</div>
+<div>PIT Inspections</div><div class="status safeRed">94%</div>
+<div>Fire Extinguisher Sign-Off</div><div class="status safeGreen">100%</div>
+<div>Exit Surveys</div><div class="status safeGreen">97%</div>
+<div>Compliance Training</div><div class="status safeRed">92%</div>
+<div>LOTO Compliance</div><div class="status safeGreen">100%</div>
+<div>Shoes for Crews</div><div class="status safeRed">92%</div>
+<div>Maximo Work Orders</div><div class="status safeRed">5 Open</div>
+</div></div>
+
+<div class="panel safetyPriority"><div class="screenTitle">Safety Guided Missions</div><div class="actionList">
+<div class="actionItem"><div class="dotIcon">1</div><div>PM Equipment inspections reminder for Grocery closer</div><span class="scoreBadge warnBadge">DUE TODAY</span></div>
+<div class="actionItem"><div class="dotIcon">2</div><div>Connect with Meat Dept. concerning Shoes for Crews compliance</div><span class="scoreBadge alertBadge">OVERDUE</span></div>
+</div></div>
+
+<div class="panel"><div class="screenTitle">Safety Topics</div><div class="safetyTopics">
+<div class="safetyTopic"><i>1</i><div>Safe Equipment Operation</div></div>
+<div class="safetyTopic"><i>2</i><div>Shoes for Crews Compliance</div></div>
+<div class="safetyTopic"><i>3</i><div>LOTO Awareness</div></div>
+<div class="safetyTopic"><i>4</i><div>Heat Illness Prevention</div></div>
+</div></div>
+</div>`+footer()
+}
+
+function maximoScreen(){
+return detailTop('MAXIMO','FIXTURES • EQUIPMENT • FACILITY • REFRIGERATION')+`
+<div class="content detail">
+<h2>MAXIMO</h2>
+<p>Submit broken fixtures, equipment issues, facility concerns, and refrigeration work orders.</p>
+<button class="bigBtn" onclick="openScreen('home')">Back Home</button>
+</div>`+footer()
+}
+
+function freshStartScreen(){
+return detailTop('FRESH START','TRAINING • COMPLIANCE • COMMUNICATION')+`
+<div class="content freshCompact">
+
+<div class="panel">
+<div class="screenTitle">Fresh Start Overview</div>
+<div class="freshMetricGrid">
+<div class="freshMetric"><span>Daily Question Completion</span><b class="freshGreen">92%</b><small class="freshGreen">Store Completion</small></div>
+<div class="freshMetric"><span>Compliance Training</span><b class="freshRed">14 Due</b><small class="freshRed">Assignments</small></div>
+<div class="freshMetric"><span>Evaluations Due</span><b class="freshRed">3 Due</b><small class="freshRed">8/13/2026</small></div>
+<div class="freshMetric"><span>Company Communications</span><b class="freshGreen">4 New</b><small class="freshGreen">Unread Updates</small></div>
+</div>
+</div>
+
+<div class="panel">
+<div class="freshRank">
+<div class="freshRankIcon">#3</div>
+<div>
+<h3>District Ranking</h3>
+<p>Store #129 is #3 of 18 stores for Fresh Start participation.</p>
+<p class="freshGreen">Above District Average ▲ Trending Up</p>
+</div>
+<div class="freshRankBadge">#3 / 18<br>STORES</div>
+</div>
+</div>
+
+<div class="panel">
+<div class="screenTitle">Development & Compliance</div>
+<div class="freshGrid">
+<div class="head">Category</div><div class="head">Status</div>
+<div>Daily Questions</div><div class="status freshGreen">92%</div>
+<div>Food Safety Training</div><div class="status freshGreen">98%</div>
+<div>Ethics & Compliance</div><div class="status freshGreen">96%</div>
+<div>New Hire Check-Ins</div><div class="status freshRed">4 Due</div>
+<div>Leadership Development</div><div class="status freshRed">3 Due</div>
+<div>Safety Training</div><div class="status freshGreen">100%</div>
+</div>
+</div>
+
+<div class="panel freshPriority">
+<div class="screenTitle">Fresh Start Guided Missions</div>
+<div class="actionList">
+<div class="actionItem"><div class="dotIcon">1</div><div>Review overdue New Hire evaluations with Department Leaders</div><span class="scoreBadge alertBadge">OVERDUE</span></div>
+<div class="actionItem"><div class="dotIcon">2</div><div>Verify Daily Question completion in Deli and Bakery</div><span class="scoreBadge warnBadge">DUE TODAY</span></div>
+<div class="actionItem"><div class="dotIcon">3</div><div>Review outstanding Compliance Training assignments with Store Leadership Team</div><span class="scoreBadge warnBadge">DUE TODAY</span></div>
+</div>
+</div>
+
+<div class="panel">
+<div class="screenTitle">Company Communications</div>
+<div class="freshComms">
+<div class="freshMsg"><i>1</i><div>Fourth of July Associate Discount Program</div></div>
+<div class="freshMsg"><i>2</i><div>4th of July Appreciation Lunch - Connect with Promise Team</div></div>
+
+
+</div>
+</div>
+
+</div>`+footer()
+}
+
+
+function laborScreen(){
+const rows=[
+ ["Grocery","102%","98%","+3.1%","+1.8%","1.1%","98"],
+ ["Dairy","101%","96%","+2.4%","+1.2%","0.8%","97"],
+ ["Meat","99%","95%","-0.6%","+0.4%","1.9%","95"],
+ ["Seafood","98%","94%","+1.1%","+0.8%","1.3%","94"],
+ ["Produce","103%","99%","+4.2%","+2.7%","0.5%","99"],
+ ["Bakery","97%","93%","-1.3%","-0.4%","2.4%","91"],
+ ["Deli","95%","91%","-2.1%","-1.6%","3.1%","89"],
+ ["Murray's","101%","97%","+2.0%","+1.5%","0.7%","97"],
+ ["Starbucks","99%","95%","+0.8%","+0.6%","1.4%","95"],
+ ["GM","100%","96%","+1.5%","+0.9%","0.9%","96"],
+ ["HBC","100%","96%","+1.7%","+1.0%","0.8%","96"]
+];
+const color=(v)=>String(v).includes('-')||String(v).startsWith('89')||String(v).startsWith('91')||String(v).startsWith('3.1')||String(v).startsWith('2.4')?'laborRed':'laborGreen';
+return detailTop('LABOR','STORE #129 OPERATIONAL VIEW')+`
+<div class="content laborCompact">
+
+<div class="panel">
+<div class="screenTitle">Labor Overview</div>
+<div class="laborMetricGrid">
+<div class="laborMetric"><span>LABOR COST %</span><b class="laborRed">▲ 3.29%</b><small class="laborRed">VS LY</small></div>
+<div class="laborMetric"><span>SCHEDULED VS FORECAST</span><b class="laborGreen">65.5</b><small class="laborGreen">VS LY</small></div>
+<div class="laborMetric"><span>OT HOURS</span><b class="laborRed">85 HRS</b><small class="laborGreen">2.2% VS FORECAST</small></div>
+<div class="laborMetric"><span>STORE EFF %</span><b class="laborGreen">101.6%</b><small class="laborGreen">ON TRACK</small></div>
+</div>
+</div>
+
+<div class="panel">
+<div class="screenTitle">Department Labor</div>
+<div class="laborGrid">
+<div class="head">Dept</div><div class="head">Eff%</div><div class="head">PTWR</div><div class="head">+/- LY</div><div class="head">+/- WTD</div><div class="head">OT%</div><div class="head">Health</div>
+${rows.map(r=>`
+<div class="dept">${r[0]}</div>
+<div class="${color(r[1])}">${r[1]}</div>
+<div class="${color(r[2])}">${r[2]}</div>
+<div class="${color(r[3])}">${r[3]}</div>
+<div class="${color(r[4])}">${r[4]}</div>
+<div class="${color(r[5])}">${r[5]}</div>
+<div class="${color(r[6])}">${r[6]}</div>`).join('')}
+</div>
+</div>
+
+<div class="panel laborPriority">
+<div class="screenTitle">Labor Guided Missions</div>
+<div class="actionList">
+<div class="actionItem"><div class="dotIcon">1</div><div>Review Deli labor exemptions with Deli Leader</div><span class="scoreBadge alertBadge">DUE TODAY</span></div>
+<div class="actionItem"><div class="dotIcon">2</div><div>Connect with Bakery Leader concerning labor shortage and OT%</div><span class="scoreBadge alertBadge">DUE TODAY</span></div>
+<div class="actionItem"><div class="dotIcon">3</div><div>Complete Schedule Review with Dept Leaders for Holiday Forecasting</div><span class="scoreBadge alertBadge">OVERDUE</span></div>
+</div>
+</div>
+
+</div>`+footer()
+}
+
+
+function detail(name){return detailTop(String(name).toUpperCase(),'SCREEN PLACEHOLDER FOR NEXT REVIEW')+`<div class="content detail"><h2>${String(name).replace(/^[a-z]/,m=>m.toUpperCase())}</h2><p>This button is active. We will polish this screen after the Associate workflow is locked.</p><button class="bigBtn" onclick="openScreen('home')">Back Home</button></div>`+footer()}
+function openScreen(k){
+  const routes={home:home,associate:associate,mission:mission,thermometer:thermometer,sanitize:sanitize,takeTemp:takeTemp,dataRecorded:dataRecorded,complete:complete,missions:missions,production:productionScreen,inventory:inventoryScreen,shrink:shrinkScreen,replenishment:replenishmentScreen,repMission:repMission,repFifo:repFifo,food:foodSafetyScreen,foodordering:orderingScreen,labor:laborScreen,freshstart:freshStartScreen,freshStart:freshStartScreen,maximo:maximoScreen,safety:safetyScreen};
+  try{document.getElementById('app').innerHTML=(routes[k]||(()=>moduleData[k]?moduleScreen(k):detail(k)))();}catch(e){document.getElementById('app').innerHTML=detailTop('ERROR','SCREEN LOAD ISSUE')+`<div class="content detail"><h2>Screen Error</h2><p>${String(e.message||e)}</p><button class="bigBtn" onclick="openScreen('home')">Back Home</button></div>`+footer();}}
+openScreen('home');
+
+</script>
+<!-- LABOR MODULE LOCKED -->
+<script>
+
+
+
+</script>
+</body></html>
