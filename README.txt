@@ -1,1 +1,0 @@
-GitHub Pages root-ready v2. Adds corrected arrow/icon hotspots and persistent AI Assistant notes. Upload all files and the images folder directly to the repository root. Hard refresh after deployment.
