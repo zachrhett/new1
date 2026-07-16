@@ -1,1 +1,0 @@
-v7 adds fullscreen PWA display, safe-area support, an optional Full Screen button for supported browsers, and a compact FRIEND-branded assistant panel. On iPhone/iPad, use Safari Share > Add to Home Screen for true fullscreen.
