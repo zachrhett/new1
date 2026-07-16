@@ -1,0 +1,1 @@
+v6: Composite workflow arrows fixed. Overview -> Operations & Quality -> Sales & Financial -> People & Leadership -> Home. Back arrows reverse that sequence; Store Alerts back returns to Composite Overview. Dedicated composite arrow/bell zones applied to every Composite screen.
