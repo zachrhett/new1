@@ -1,1 +1,0 @@
-v12: Replaced the Sales destination screen (images/sales.webp) with the supplied Sales Snapshot / Sales vs Plan screen. Existing Home Sales tile routing and all standard top/bottom navigation hotspots remain unchanged. Original screen retained as images/sales-original.webp. Service-worker cache version updated.
